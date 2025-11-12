@@ -1,0 +1,22 @@
+# Arquivos temporários do sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos de backup e cache
+*.bak
+*.tmp
+*.log
+
+# Configurações locais de editor
+.vscode/
+.idea/
+
+# Pastas internas não públicas
+privado/
+imagens_originais/
+rascunhos/
+
+# Arquivos compactados
+*.zip
+*.rar
+*.7z
