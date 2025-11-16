@@ -1,1 +1,18 @@
 politica-de-cookies.html
+AGENCIA-PAULO-ROGERIO-TUR
+│
+├── index.html
+├── politica-de-cookies.html
+├── politica-de-privacidade.html
+│
+├── src/
+│   ├── main.tsx
+│   ├── app.tsx
+│   
+│
+├── public/
+│   └── imagens, favicon, etc.
+│
+└── vercel.json 
+
+
