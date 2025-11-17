@@ -1,5 +1,10 @@
 User-agent: *
 Allow: /
 
+# Bloquear áreas inexistentes (apenas prevenção)
+Disallow: /admin/
+Disallow: /api/
+
 Sitemap: https://agenciapaulorogeriotur.com.br/sitemap.xml
+
 
