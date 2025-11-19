@@ -2,41 +2,32 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Agência Paulo Rogério Tur – Excursões e Turismo em Poços de Caldas</title>
 
-    <meta
-      name="description"
-      content="Agência Paulo Rogério Tur – Passeios, excursões guiadas, city tour e turismo completo em Poços de Caldas. Teleférico, Cristo Redentor, mirantes, parques e muito mais."
-    />
-    <meta
-      name="keywords"
-      content="turismo poços de caldas, excursões poços de caldas, agência de turismo poços de caldas, paulo rogerio tur, passeios guiados, city tour poços"
-    />
+    <meta name="description" content="Passeios guiados, excursões, city tour e turismo completo em Poços de Caldas com o guia Paulo Rogério. Segurança, conforto e roteiros exclusivos." />
+    <meta name="keywords" content="turismo poços de caldas, excursões poços, paulo rogério tur, city tour poços, passeios guiados, guia turístico" />
     <meta name="author" content="Agência Paulo Rogério Tur" />
 
     <style>
       * {
-        box-sizing: border-box;
         margin: 0;
         padding: 0;
+        box-sizing: border-box;
       }
 
       body {
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-          sans-serif;
-        color: #222;
-        background: #f4f4f4;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #f5f5f5;
+        color: #333;
         line-height: 1.6;
       }
 
       header {
         background: #0a4f7a;
         color: #fff;
-        padding: 10px 20px;
+        padding: 15px;
         position: sticky;
         top: 0;
         z-index: 10;
@@ -44,28 +35,21 @@
 
       .container {
         max-width: 1100px;
-        margin: 0 auto;
+        margin: auto;
         padding: 0 15px;
       }
 
-      .topbar {
+      nav {
         display: flex;
-        align-items: center;
         justify-content: space-between;
-        gap: 15px;
-      }
-
-      .logo {
-        font-size: 1.4rem;
-        font-weight: 700;
-        letter-spacing: 0.05em;
+        align-items: center;
       }
 
       nav a {
         color: #fff;
         text-decoration: none;
         margin-left: 15px;
-        font-size: 0.95rem;
+        font-weight: bold;
       }
 
       nav a:hover {
@@ -75,7 +59,7 @@
       .hero {
         background: #0f5f94;
         color: #fff;
-        padding: 40px 0 30px;
+        padding: 40px 0;
       }
 
       .hero-inner {
@@ -86,95 +70,37 @@
       }
 
       .hero-text {
-        flex: 1 1 260px;
-      }
-
-      .hero-text h1 {
-        font-size: 2rem;
-        margin-bottom: 10px;
-      }
-
-      .hero-text p {
-        margin-bottom: 15px;
-      }
-
-      .hero-buttons {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-      }
-
-      .btn {
-        display: inline-block;
-        padding: 10px 18px;
-        border-radius: 6px;
-        border: none;
-        cursor: pointer;
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 0.95rem;
-      }
-
-      .btn-primary {
-        background: #ffd34e;
-        color: #222;
-      }
-
-      .btn-secondary {
-        background: transparent;
-        color: #fff;
-        border: 1px solid #fff;
+        flex: 1;
       }
 
       .hero-image {
-        flex: 1 1 260px;
-        min-height: 220px;
+        flex: 1;
+        min-height: 250px;
         border-radius: 12px;
-        background-size: cover;
+        background-image: url("imagens/teleferico.jpg");
         background-position: center;
-        /* use uma das suas fotos de capa aqui */
-        background-image: url("imagens/capa vista area 1.jpg");
+        background-size: cover;
+      }
+
+      .btn {
+        padding: 10px 18px;
+        display: inline-block;
+        background: #ffd34e;
+        border-radius: 6px;
+        color: #222;
+        text-decoration: none;
+        font-weight: bold;
+        margin-right: 10px;
       }
 
       section {
         padding: 40px 0;
       }
 
-      section h2 {
+      h2 {
         text-align: center;
         margin-bottom: 20px;
-        font-size: 1.6rem;
         color: #0a4f7a;
-      }
-
-      section p.section-intro {
-        text-align: center;
-        max-width: 700px;
-        margin: 0 auto 25px;
-        font-size: 0.98rem;
-      }
-
-      .servicos-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 20px;
-      }
-
-      .servico-card {
-        background: #fff;
-        border-radius: 10px;
-        padding: 18px;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-      }
-
-      .servico-card h3 {
-        margin-bottom: 8px;
-        font-size: 1.1rem;
-        color: #0a4f7a;
-      }
-
-      .servico-card p {
-        font-size: 0.95rem;
       }
 
       .galeria-grid {
@@ -183,83 +109,34 @@
         gap: 15px;
       }
 
-      .galeria-item {
-        background: #ddd;
-        border-radius: 10px;
-        overflow: hidden;
-        min-height: 150px;
-      }
-
-      .galeria-item img {
+      .galeria-grid img {
         width: 100%;
-        height: 100%;
+        border-radius: 10px;
         object-fit: cover;
-        display: block;
-      }
-
-      #localizacao {
-        background: #ffffff;
-      }
-
-      #localizacao p {
-        text-align: center;
-        margin-bottom: 15px;
-      }
-
-      #map {
-        width: 100%;
-        height: 400px;
-        max-width: 900px;
-        margin: 0 auto;
-        border-radius: 12px;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
-      }
-
-      #contato .contato-box {
-        background: #fff;
-        border-radius: 10px;
-        padding: 20px;
-        max-width: 700px;
-        margin: 0 auto;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-      }
-
-      #contato ul {
-        list-style: none;
-        margin-bottom: 15px;
-      }
-
-      #contato li {
-        margin-bottom: 6px;
       }
 
       footer {
         background: #0a4f7a;
-        color: #fff;
+        color: white;
         text-align: center;
-        padding: 15px 10px;
-        font-size: 0.85rem;
-        margin-top: 30px;
-      }
-
-      @media (max-width: 600px) {
-        .hero-text h1 {
-          font-size: 1.6rem;
-        }
+        padding: 15px;
+        margin-top: 40px;
       }
     </style>
   </head>
 
   <body>
     <header>
-      <div class="container topbar">
-        <div class="logo">Agência Paulo Rogério Tur</div>
+      <div class="container">
         <nav>
-          <a href="#sobre">Sobre</a>
-          <a href="#servicos">Passeios</a>
-          <a href="#galeria">Galeria</a>
-          <a href="#localizacao">Localização</a>
-          <a href="#contato">Contato</a>
+          <div><strong>Paulo Rogério Tur</strong></div>
+          <div>
+            <a href="#sobre">Sobre</a>
+            <a href="#servicos">Roteiros</a>
+            <a href="#galeria">Galeria</a>
+            <a href="#localizacao">Localização</a>
+            <a href="#contato">Contato</a>
+          </div>
         </nav>
       </div>
     </header>
@@ -268,15 +145,10 @@
       <div class="container hero-inner">
         <div class="hero-text">
           <h1>Excursões e City Tour em Poços de Caldas</h1>
-          <p>
-            Passeios guiados com segurança, conforto e experiência de quem
-            conhece cada detalhe da cidade.
-          </p>
-          <div class="hero-buttons">
-            <a class="btn btn-primary" href="#contato">Reservar agora</a>
-            <a href="#servicos" class="btn btn-secondary">Ver roteiros</a>
-          </div>
+          <p>Passeios guiados com segurança, conforto e experiência.</p>
+          <a href="#contato" class="btn">Reservar agora</a>
         </div>
+
         <div class="hero-image"></div>
       </div>
     </section>
@@ -284,10 +156,9 @@
     <section id="sobre">
       <div class="container">
         <h2>Sobre a Agência</h2>
-        <p class="section-intro">
-          A Agência Paulo Rogério Tur atua em Poços de Caldas oferecendo
-          passeios completos para grupos, famílias e excursões de várias
-          regiões do Brasil.
+        <p style="text-align:center;">
+          A Agência Paulo Rogério Tur realiza passeios completos por Poços de Caldas,
+          oferecendo roteiros personalizados e atendimento profissional.
         </p>
       </div>
     </section>
@@ -295,108 +166,63 @@
     <section id="servicos">
       <div class="container">
         <h2>Passeios e Roteiros</h2>
-        <p class="section-intro">
-          Alguns dos roteiros mais procurados em Poços de Caldas.
-        </p>
-
-        <div class="servicos-grid">
-          <div class="servico-card">
-            <h3>City Tour Clássico</h3>
-            <p>Teleférico, Cristo Redentor, mirantes e principais cartões-postais.</p>
-          </div>
-          <div class="servico-card">
-            <h3>Excursões para Grupos</h3>
-            <p>Roteiros completos para excursões de todo o Brasil.</p>
-          </div>
-          <div class="servico-card">
-            <h3>Pacotes Personalizados</h3>
-            <p>Montagem de pacotes sob medida conforme o perfil do grupo.</p>
-          </div>
-          <div class="servico-card">
-            <h3>Traslados e Recepção</h3>
-            <p>Recepção em hotéis, rodoviária e pontos de chegada.</p>
-          </div>
-        </div>
+        <p style="text-align:center;">Alguns dos roteiros mais procurados.</p>
       </div>
     </section>
 
     <section id="galeria">
       <div class="container">
-        <h2>Galeria de Poços de Caldas</h2>
-        <p class="section-intro">
-          Imagens dos principais pontos turísticos atendidos pela agência.
-        </p>
-
+        <h2>Galeria</h2>
         <div class="galeria-grid">
-          <div class="galeria-item">
-            <img src="imagens/teleferico1.jpeg" alt="Teleférico de Poços de Caldas" />
-          </div>
-          <div class="galeria-item">
-            <img src="imagens/cristo redentor com turistas.jpeg" alt="Cristo Redentor de Poços de Caldas" />
-          </div>
-          <div class="galeria-item">
-            <img src="imagens/mirante de santa rita.jpeg" alt="Mirante Santa Rita" />
-          </div>
-          <div class="galeria-item">
-            <img src="imagens/parque recanto japones.jpeg" alt="Parque Recanto Japonês" />
-          </div>
+          <img src="imagens/teleferico.jpg" alt="Teleférico">
+          <img src="imagens/cristo.jpg" alt="Cristo Redentor">
+          <img src="imagens/mirante-santa-rita.jpg" alt="Mirante Santa Rita">
+          <img src="imagens/cascata-veudenoiva.jpg" alt="Cascata Véu das Noivas">
         </div>
       </div>
     </section>
 
     <section id="localizacao">
       <div class="container">
-        <h2>Onde Estamos</h2>
-        <p>Rua Guiseppe Maiochi, 217 – Poços de Caldas / MG – CEP 37704-316</p>
-        <div id="map"></div>
+        <h2>Localização</h2>
+        <p style="text-align:center;">
+          Rua Guiseppe Maiochi, 217 – Poços de Caldas – MG
+        </p>
+
+        <div id="map" style="height:350px; border-radius:12px;"></div>
       </div>
     </section>
 
     <section id="contato">
       <div class="container">
         <h2>Contato</h2>
-        <div class="contato-box">
-          <ul>
-            <li><strong>Telefone / WhatsApp:</strong> (35) 9 9999-9999</li>
-            <li><strong>E-mail:</strong> contato@agenciapaulorogeriotur.com.br</li>
-            <li><strong>Cidade:</strong> Poços de Caldas – MG</li>
-          </ul>
-        </div>
+        <p style="text-align:center;">
+          Telefone/WhatsApp: <strong>(35) 9 9999-9999</strong><br />
+          E-mail: contato@agenciapaulorogeriotur.com.br
+        </p>
       </div>
     </section>
 
     <footer>
-      Agência Paulo Rogério Tur – Poços de Caldas / MG<br />
-      © <span id="ano-atual"></span> – Todos os direitos reservados.
+      Agência Paulo Rogério Tur – © <span id="ano"></span>
     </footer>
 
     <script>
-      document.getElementById("ano-atual").textContent =
-        new Date().getFullYear();
-    </script>
+      document.getElementById("ano").textContent = new Date().getFullYear();
 
-    <script>
       function initMap() {
-        const agenciaLocation = { lat: -21.81277, lng: -46.55921 };
-
-        const map = new google.maps.Map(document.getElementById("map"), {
+        const loc = { lat: -21.81277, lng: -46.55921 };
+        new google.maps.Map(document.getElementById("map"), {
           zoom: 17,
-          center: agenciaLocation,
+          center: loc,
         });
-
         new google.maps.Marker({
-          position: agenciaLocation,
-          map: map,
-          title: "Agência Paulo Rogério Tur",
+          position: loc,
+          map: new google.maps.Map(document.getElementById("map")),
         });
       }
     </script>
 
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFPSxz-TTTVvp0PQvJiFFrFS-uY_ePJA&callback=initMap&libraries=places&loading=async"
-      async
-      defer
-    ></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFPSxz-TTTVvp0PQvJiFFrFS-uY_ePJA&callback=initMap" async defer></script>
   </body>
 </html>
-
