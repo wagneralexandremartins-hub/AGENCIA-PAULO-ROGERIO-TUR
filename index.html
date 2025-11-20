@@ -1,4 +1,4 @@
-<!doctype html> 
+l<!doctype html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
@@ -6,9 +6,21 @@
 
     <title>Agência Paulo Rogério Tur – Excursões e Turismo em Poços de Caldas</title>
 
-    <meta name="description" content="Passeios guiados, excursões, city tour e turismo completo em Poços de Caldas com o guia Paulo Rogério. Segurança, conforto e roteiros exclusivos." />
-    <meta name="keywords" content="turismo poços de caldas, excursões poços, paulo rogério tur, city tour poços, passeios guiados, guia turístico" />
+    <meta
+      name="description"
+      content="Passeios guiados, excursões, city tour e turismo completo em Poços de Caldas com o guia Paulo Rogério. Segurança, conforto e roteiros exclusivos."
+    />
+    <meta
+      name="keywords"
+      content="turismo poços de caldas, excursões poços, paulo rogério tur, city tour poços, passeios guiados, guia turístico"
+    />
     <meta name="author" content="Agência Paulo Rogério Tur" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
     <style>
       * {
@@ -30,7 +42,7 @@
         padding: 15px;
         position: sticky;
         top: 0;
-        z-index: 10;
+        z-index: 20;
       }
 
       .container {
@@ -82,7 +94,7 @@
         background-size: cover;
       }
 
-      .btn {
+      .btn-custom {
         padding: 10px 18px;
         display: inline-block;
         background: #ffd34e;
@@ -122,6 +134,36 @@
         padding: 15px;
         margin-top: 40px;
       }
+
+      /* LEGENDAS DO CARROSSEL MAIS LEGÍVEIS */
+      #carouselPontosTuristicos .carousel-caption {
+        background: rgba(0, 0, 0, 0.55);
+        border-radius: 0.75rem;
+        padding: 0.75rem 1.25rem;
+      }
+
+      #carouselPontosTuristicos .carousel-caption h5 {
+        font-size: 1.15rem;
+        font-weight: 600;
+      }
+
+      /* BOTÃO FLUTUANTE DO WHATSAPP SOBRE O CARROSSEL */
+      .whatsapp-btn {
+        position: absolute;
+        right: 1.5rem;
+        bottom: 1.5rem;
+        z-index: 20;
+      }
+
+      @media (max-width: 768px) {
+        #carouselPontosTuristicos .carousel-caption {
+          padding: 0.5rem 0.75rem;
+        }
+
+        #carouselPontosTuristicos .carousel-caption h5 {
+          font-size: 0.95rem;
+        }
+      }
     </style>
   </head>
 
@@ -131,98 +173,3 @@
         <nav>
           <div><strong>Paulo Rogério Tur</strong></div>
           <div>
-            <a href="#sobre">Sobre</a>
-            <a href="#servicos">Roteiros</a>
-            <a href="#galeria">Galeria</a>
-            <a href="#localizacao">Localização</a>
-            <a href="#contato">Contato</a>
-          </div>
-        </nav>
-      </div>
-    </header>
-
-    <section class="hero">
-      <div class="container hero-inner">
-        <div class="hero-text">
-          <h1>Excursões e City Tour em Poços de Caldas</h1>
-          <p>Passeios guiados com segurança, conforto e experiência.</p>
-          <a href="#contato" class="btn">Reservar agora</a>
-        </div>
-
-        <div class="hero-image"></div>
-      </div>
-    </section>
-
-    <section id="sobre">
-      <div class="container">
-        <h2>Sobre a Agência</h2>
-        <p style="text-align:center;">
-          A Agência Paulo Rogério Tur realiza passeios completos por Poços de Caldas,
-          oferecendo roteiros personalizados e atendimento profissional.
-        </p>
-      </div>
-    </section>
-
-    <section id="servicos">
-      <div class="container">
-        <h2>Passeios e Roteiros</h2>
-        <p style="text-align:center;">Alguns dos roteiros mais procurados.</p>
-      </div>
-    </section>
-
-    <section id="galeria">
-      <div class="container">
-        <h2>Galeria</h2>
-        <div class="galeria-grid">
-          <img src="imagens/teleferico.jpg" alt="Teleférico">
-          <img src="imagens/cristo.jpg" alt="Cristo Redentor">
-          <img src="imagens/mirante-santa-rita.jpg" alt="Mirante Santa Rita">
-          <img src="imagens/cascata-veudenoiva.jpg" alt="Cascata Véu das Noivas">
-        </div>
-      </div>
-    </section>
-
-    <section id="localizacao">
-      <div class="container">
-        <h2>Localização</h2>
-        <p style="text-align:center;">
-          Rua Guiseppe Maiochi, 217 – Poços de Caldas – MG
-        </p>
-
-        <div id="map" style="height:350px; border-radius:12px;"></div>
-      </div>
-    </section>
-
-    <section id="contato">
-      <div class="container">
-        <h2>Contato</h2>
-        <p style="text-align:center;">
-          Telefone/WhatsApp: <strong>(35) 9 9999-9999</strong><br />
-          E-mail: contato@agenciapaulorogeriotur.com.br
-        </p>
-      </div>
-    </section>
-
-    <footer>
-      Agência Paulo Rogério Tur – © <span id="ano"></span>
-    </footer>
-
-    <script>
-      document.getElementById("ano").textContent = new Date().getFullYear();
-
-      function initMap() {
-        const loc = { lat: -21.81277, lng: -46.55921 };
-        new google.maps.Map(document.getElementById("map"), {
-          zoom: 17,
-          center: loc,
-        });
-        new google.maps.Marker({
-          position: loc,
-          map: new google.maps.Map(document.getElementById("map")),
-        });
-      }
-    </script>
-
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFPSxz-TTTVvp0PQvJiFFrFS-uY_ePJA&callback=initMap" async defer></script>
-  </body>
-</html>
