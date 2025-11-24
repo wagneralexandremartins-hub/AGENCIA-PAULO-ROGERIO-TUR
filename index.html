@@ -1,4 +1,4 @@
-l<!doctype html>
+<!doctype html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
@@ -39,7 +39,7 @@ l<!doctype html>
       header {
         background: #0a4f7a;
         color: #fff;
-        padding: 15px;
+        padding: 15px 0;
         position: sticky;
         top: 0;
         z-index: 20;
@@ -55,6 +55,7 @@ l<!doctype html>
         display: flex;
         justify-content: space-between;
         align-items: center;
+        gap: 16px;
       }
 
       nav a {
@@ -62,6 +63,7 @@ l<!doctype html>
         text-decoration: none;
         margin-left: 15px;
         font-weight: bold;
+        font-size: 0.95rem;
       }
 
       nav a:hover {
@@ -83,10 +85,12 @@ l<!doctype html>
 
       .hero-text {
         flex: 1;
+        min-width: 260px;
       }
 
       .hero-image {
         flex: 1;
+        min-width: 260px;
         min-height: 250px;
         border-radius: 12px;
         background-image: url("imagens/teleferico.jpg");
@@ -113,6 +117,7 @@ l<!doctype html>
         text-align: center;
         margin-bottom: 20px;
         color: #0a4f7a;
+        font-size: 1.6rem;
       }
 
       .galeria-grid {
@@ -125,6 +130,7 @@ l<!doctype html>
         width: 100%;
         border-radius: 10px;
         object-fit: cover;
+        height: 200px;
       }
 
       footer {
@@ -133,6 +139,7 @@ l<!doctype html>
         text-align: center;
         padding: 15px;
         margin-top: 40px;
+        font-size: 0.9rem;
       }
 
       /* LEGENDAS DO CARROSSEL MAIS LEGÍVEIS */
@@ -156,6 +163,11 @@ l<!doctype html>
       }
 
       @media (max-width: 768px) {
+        nav {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
         #carouselPontosTuristicos .carousel-caption {
           padding: 0.5rem 0.75rem;
         }
@@ -172,4 +184,278 @@ l<!doctype html>
       <div class="container">
         <nav>
           <div><strong>Paulo Rogério Tur</strong></div>
-          <div> 
+          <div>
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#pontos">Pontos turísticos</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#contato">Contato</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO / CAPA -->
+      <section id="inicio" class="hero">
+        <div class="container hero-inner">
+          <div class="hero-text">
+            <h1 class="h3 mb-3">
+              Descubra Poços de Caldas com quem conhece cada detalhe da cidade
+            </h1>
+            <p>
+              City tour, excursões para grupos e famílias, roteiros personalizados
+              e acompanhamento completo do guia <strong>Paulo Rogério</strong>.
+            </p>
+            <p class="mb-3">
+              Segurança, conforto e experiências únicas na charmosa cidade das
+              montanhas do sul de Minas Gerais.
+            </p>
+
+            <a
+              href="https://wa.me/553599698983?text=Olá%20Paulo%20Rogério,%20quero%20informações%20sobre%20passeios%20em%20Poços%20de%20Caldas."
+              target="_blank"
+              rel="noopener"
+              class="btn-custom"
+              >Quero um orçamento</a
+            >
+            <a href="#pontos" class="btn btn-outline-light btn-sm"
+              >Ver pontos turísticos</a
+            >
+          </div>
+
+          <div class="hero-image"></div>
+        </div>
+      </section>
+
+      <!-- SOBRE -->
+      <section id="sobre">
+        <div class="container">
+          <h2>Sobre a Agência</h2>
+          <p class="text-center mb-3">
+            A <strong>Agência Paulo Rogério Tur</strong> atua em Poços de Caldas
+            oferecendo passeios guiados, excursões e receptivo para grupos,
+            famílias, igrejas, escolas e empresas.
+          </p>
+          <p class="text-center mb-0">
+            Do agendamento do passeio ao retorno para o hotel, você conta com um
+            atendimento próximo, respeitoso e organizado, cuidando de todos os
+            detalhes para que sua experiência seja tranquila e inesquecível.
+          </p>
+        </div>
+      </section>
+
+      <!-- CARROSSEL DE PONTOS TURÍSTICOS -->
+      <section id="pontos" class="bg-light">
+        <div class="container position-relative">
+          <h2>Pontos turísticos em destaque</h2>
+
+          <div
+            id="carouselPontosTuristicos"
+            class="carousel slide mb-4"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="imagens/teleferico.jpg"
+                  class="d-block w-100"
+                  alt="Teleférico de Poços de Caldas com vista da cidade"
+                />
+                <div class="carousel-caption">
+                  <h5>Teleférico e Cristo Redentor</h5>
+                  <p>
+                    Uma das vistas mais bonitas de Poços de Caldas, ligando o
+                    centro da cidade ao Cristo.
+                  </p>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <img
+                  src="imagens/cristo.jpg"
+                  class="d-block w-100"
+                  alt="Cristo Redentor de Poços de Caldas visto da serra"
+                />
+                <div class="carousel-caption">
+                  <h5>Cristo Redentor</h5>
+                  <p>Ponto clássico para fotos e contemplação da cidade.</p>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <img
+                  src="imagens/mirante-santa-rita.jpg"
+                  class="d-block w-100"
+                  alt="Mirante de Santa Rita em Poços de Caldas"
+                />
+                <div class="carousel-caption">
+                  <h5>Mirante de Santa Rita</h5>
+                  <p>Uma parada especial para ver Poços de cima e registrar o momento.</p>
+                </div>
+              </div>
+            </div>
+
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselPontosTuristicos"
+              data-bs-slide="prev"
+            >
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselPontosTuristicos"
+              data-bs-slide="next"
+            >
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Próximo</span>
+            </button>
+          </div>
+
+          <!-- BOTÃO WHATSAPP SOBRE O CARROSSEL -->
+          <a
+            href="https://wa.me/553599698983?text=Olá%20Paulo%20Rogério,%20gostaria%20de%20agendar%20um%20passeio."
+            target="_blank"
+            rel="noopener"
+            class="btn btn-success rounded-pill shadow whatsapp-btn"
+          >
+            Falar no WhatsApp
+          </a>
+        </div>
+      </section>
+
+      <!-- GALERIA SIMPLES -->
+      <section>
+        <div class="container">
+          <h2>Mais imagens de Poços de Caldas</h2>
+          <div class="galeria-grid">
+            <img
+              src="imagens/parque-cristo.jpg"
+              alt="Parque do Cristo em Poços de Caldas"
+            />
+            <img
+              src="imagens/serra-mantiqueira.jpg"
+              alt="Vista da Serra da Mantiqueira em Poços de Caldas"
+            />
+            <img
+              src="imagens/centro-historico.jpg"
+              alt="Centro de Poços de Caldas"
+            />
+            <img
+              src="imagens/fontes-termais.jpg"
+              alt="Fontes termais em Poços de Caldas"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVIÇOS -->
+      <section id="servicos" class="bg-light">
+        <div class="container">
+          <h2>Serviços oferecidos</h2>
+          <div class="row g-3">
+            <div class="col-md-4">
+              <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                  <h5 class="card-title">City tour completo</h5>
+                  <p class="card-text">
+                    Roteiro pelos principais pontos turísticos da cidade, com
+                    paradas para fotos, compras e alimentação.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                  <h5 class="card-title">Excursões para grupos</h5>
+                  <p class="card-text">
+                    Atendimento especializado para igrejas, escolas, excursões de
+                    cidades vizinhas e grupos fechados.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                  <h5 class="card-title">Roteiros personalizados</h5>
+                  <p class="card-text">
+                    Criação de roteiros sob medida conforme o perfil do grupo:
+                    famílias, casais, terceira idade e turismo religioso.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTATO -->
+      <section id="contato">
+        <div class="container">
+          <h2>Entre em contato</h2>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <div class="p-3 border rounded bg-white h-100">
+                <h5 class="mb-2">Agende seu passeio</h5>
+                <p class="mb-1">
+                  WhatsApp:
+                  <strong>(35) 9 9698-8983</strong>
+                </p>
+                <p class="mb-1">
+                  E-mail:
+                  <strong>contato@agenciapaulorogeriotur.com.br</strong>
+                </p>
+                <p class="mb-0">
+                  Atendemos excursões, grupos e famílias em Poços de Caldas e
+                  região.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="p-3 border rounded bg-white h-100">
+                <h5 class="mb-2">Mensagem rápida pelo WhatsApp</h5>
+                <p class="mb-2">
+                  Clique no botão abaixo e envie sua dúvida ou solicitação de
+                  orçamento diretamente pelo WhatsApp.
+                </p>
+                <a
+                  href="https://wa.me/553599698983?text=Olá%20Paulo%20Rogério,%20quero%20informações%20sobre%20passeios%20em%20Poços%20de%20Caldas."
+                  target="_blank"
+                  rel="noopener"
+                  class="btn btn-success"
+                >
+                  Chamar no WhatsApp
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        &copy; <span id="ano-atual"></span> Agência Paulo Rogério Tur – Poços de
+        Caldas / MG. Todos os direitos reservados.
+      </p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Ano automático no rodapé -->
+    <script>
+      document.getElementById("ano-atual").textContent =
+        new Date().getFullYear();
+    </script>
+  </body>
+</html>
