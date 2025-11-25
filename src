@@ -1,4 +1,4 @@
 /src
-   ├── main.tsx
-   ├── App.tsx
-   └── styles.css
+main.tsx
+App.tsx
+styles.css
