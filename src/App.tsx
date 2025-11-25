@@ -35,8 +35,8 @@ const Header: React.FC = () => {
       <div className="prt-container prt-header-inner">
         <div className="prt-logo">
           <img
-            src="/images/logo-paulo-rogerio-tur.png"
-            alt="Agência Paulo Rogério Tur"
+            src="/imagens/guia-paulo-rogerio-pocos-de-caldas-turistas.jpg.jpg"
+            alt="Guia Paulo Rogério com turistas no portal de Poços de Caldas"
           />
           <div className="prt-logo-text">
             <span className="prt-logo-title">Paulo Rogério Tur</span>
@@ -90,12 +90,12 @@ const Hero: React.FC = () => {
         <div className="prt-hero-side">
           <div className="prt-hero-card">
             <img
-              src="/images/teleferico-pocos.jpg"
-              alt="Teleférico de Poços de Caldas"
+              src="/imagens/capa-vista-area.jpg.jpg"
+              alt="Vista aérea de Poços de Caldas"
               className="prt-hero-image"
             />
             <p className="prt-hero-caption">
-              Vista do teleférico com a Serra da Mantiqueira ao fundo.
+              Vista aérea de Poços de Caldas, ideal para planejar seu roteiro.
             </p>
           </div>
 
@@ -183,21 +183,26 @@ const ToursGrid: React.FC = () => {
       title: "City Tour Clássico",
       description:
         "Roteiro completo pelos principais pontos turísticos: teleférico, Cristo, Centro, Recanto Japonês e muito mais.",
-      image: "/images/city-tour-classico.jpg",
+      // Paulo Rogério com a família no relógio floral
+      image:
+        "/imagens/familia-com-guia-paulo-rogerio-no-relogio-floral.jpg.jpg",
       duration: "Duração média: 4 a 5 horas",
     },
     {
       title: "Passeio Serra & Mirantes",
       description:
         "Vista panorâmica da cidade em diferentes mirantes, com paradas para fotos e contemplação.",
-      image: "/images/mirante-santa-rita.jpg",
+      // Cristo com vista aérea
+      image:
+        "/imagens/cristo-redentor-pocos-de-caldas-vista-aerea.jpg.jpg",
       duration: "Duração média: 3 horas",
     },
     {
       title: "Grupos de Terceira Idade",
       description:
         "Roteiros adaptados, com paradas estratégicas, conforto e acompanhamento especial.",
-      image: "/images/grupo-terceira-idade.jpg",
+      // Fonte dos Amores
+      image: "/imagens/fonte-dos-amores-pocos-de-caldas-1.jpg.jpg",
       duration: "Roteiro personalizado conforme o grupo",
     },
   ];
