@@ -1,0 +1,245 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f8f8f8;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* CONTAINERS */
+.prt-container {
+  width: 92%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+.prt-header {
+  background: #004aad;
+  padding: 12px 0;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.prt-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.prt-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.prt-logo img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.prt-logo-title {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.prt-logo-subtitle {
+  font-size: 13px;
+}
+
+.prt-nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+.prt-nav a:hover {
+  text-decoration: underline;
+}
+
+/* HERO */
+.prt-hero {
+  background: #fff;
+  padding: 40px 0;
+}
+
+.prt-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.prt-hero-text h1 {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.prt-hero-text h1 span {
+  color: #004aad;
+}
+
+.prt-hero-list {
+  margin: 15px 0;
+}
+
+.prt-hero-list li {
+  margin-bottom: 6px;
+}
+
+/* BUTTONS */
+.prt-btn {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.prt-btn-primary {
+  background: #25d366;
+  color: #fff;
+}
+
+.prt-btn-outline {
+  border: 2px solid #004aad;
+  background: transparent;
+  color: #004aad;
+}
+
+.prt-btn-outline:hover {
+  background: #004aad;
+  color: #fff;
+}
+
+/* HERO IMAGE */
+.prt-hero-card {
+  background: #eee;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.prt-hero-image {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.prt-hero-caption {
+  font-size: 13px;
+  margin-top: 6px;
+  text-align: center;
+}
+
+/* WEATHER WIDGET */
+.prt-weather-card {
+  margin-top: 20px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.prt-weather-temp {
+  font-size: 30px;
+  font-weight: bold;
+  color: #004aad;
+}
+
+/* SECTIONS */
+.prt-section {
+  padding: 40px 0;
+}
+
+.prt-section-title {
+  font-size: 26px;
+  margin-bottom: 25px;
+  color: #004aad;
+}
+
+/* GRID ROTEIROS */
+.prt-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.prt-card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+}
+
+.prt-card-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.prt-card-body {
+  padding: 15px;
+}
+
+.prt-card-duration {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #004aad;
+}
+
+/* HIGHLIGHTS */
+.prt-highlights {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.prt-highlight-item {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  flex: 1;
+  min-width: 250px;
+}
+
+/* CONTATO */
+.prt-contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.prt-contact-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.prt-contact-extra {
+  margin-top: 10px;
+}
+
+/* FOOTER */
+.prt-footer {
+  background: #004aad;
+  padding: 20px 0;
+  color: #fff;
+  text-align: center;
+}
+
+/* WHATSAPP FLOAT */
+.prt-whatsapp-float {
+  position: fixed;
