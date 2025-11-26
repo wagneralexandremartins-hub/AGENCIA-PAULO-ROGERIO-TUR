@@ -10,6 +10,7 @@ const App: React.FC = () => {
     <div className="prt-page">
       <CookieBanner />
       <Header />
+      <SeasonalOutdoor />
       <main>
         <Hero />
         <SectionWrapper id="roteiros" title="Roteiros em Poços de Caldas">
@@ -50,6 +51,48 @@ const Header: React.FC = () => {
         </nav>
       </div>
     </header>
+  );
+};
+
+/** OUTDOOR NATAL DE LUZ – NOVEMBRO E DEZEMBRO */
+const SeasonalOutdoor: React.FC = () => {
+  const month = new Date().getMonth(); // 0 = jan, 10 = nov, 11 = dez
+  const show = month === 10 || month === 11;
+
+  if (!show) return null;
+
+  return (
+    <section className="prt-outdoor">
+      <div className="prt-container">
+        <div className="prt-outdoor-box">
+          <div className="prt-outdoor-main">
+            <span className="prt-outdoor-icon">🎄</span>
+            <div>
+              <h2>Natal de Luz em Poços de Caldas</h2>
+              <p>
+                Em <strong>novembro e dezembro</strong>, a cidade já vive o
+                clima do Natal de Luz. Nosso{" "}
+                <strong>City Tour Clássico</strong> inclui os principais pontos
+                iluminados para fotos e contemplação.
+              </p>
+            </div>
+          </div>
+          <ul className="prt-outdoor-list">
+            <li>Praça Pedro Sanches e Fonte Luminosa iluminadas</li>
+            <li>Palácio Casino, Thermas e praças decoradas</li>
+            <li>Árvores, painéis natalinos e atrações de fim de ano</li>
+          </ul>
+          <a
+            href="https://wa.me/5535988951441?text=Olá%20Paulo%20Rogério,%20quero%20aproveitar%20o%20Natal%20de%20Luz%20em%20Poços%20de%20Caldas%20no%20City%20Tour."
+            className="prt-btn prt-btn-outdoor"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Reservar City Tour no Natal de Luz
+          </a>
+        </div>
+      </div>
+    </section>
   );
 };
 
@@ -183,7 +226,6 @@ const ToursGrid: React.FC = () => {
       title: "City Tour Clássico",
       description:
         "Roteiro completo pelos principais pontos turísticos: teleférico, Cristo, Centro, Recanto Japonês e muito mais.",
-      // Paulo Rogério com a família no relógio floral
       image:
         "/imagens/familia-com-guia-paulo-rogerio-no-relogio-floral.jpg",
       duration: "Duração média: 4 a 5 horas",
@@ -192,7 +234,6 @@ const ToursGrid: React.FC = () => {
       title: "Passeio Serra & Mirantes",
       description:
         "Vista panorâmica da cidade em diferentes mirantes, com paradas para fotos e contemplação.",
-      // Cristo com vista aérea
       image:
         "/imagens/cristo-redentor-pocos-de-caldas-vista-aerea.jpg",
       duration: "Duração média: 3 horas",
@@ -201,7 +242,6 @@ const ToursGrid: React.FC = () => {
       title: "Grupos de Terceira Idade",
       description:
         "Roteiros adaptados, com paradas estratégicas, conforto e acompanhamento especial.",
-      // Fonte dos Amores
       image: "/imagens/fonte-dos-amores-pocos-de-caldas-1.jpg",
       duration: "Roteiro personalizado conforme o grupo",
     },
