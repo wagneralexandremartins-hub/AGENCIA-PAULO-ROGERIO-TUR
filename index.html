@@ -1,39 +1,770 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
 
-    <title>Agência Paulo Rogério Tur – Excursões em Poços de Caldas</title>
+    <title>
+      Agência Paulo Rogério Tur – Excursões e City Tour em Poços de Caldas – MG
+    </title>
 
-    <!-- SEO -->
+    <!-- SEO BÁSICO -->
     <meta
       name="description"
-      content="Excursões, city tour, grupos de terceira idade e passeios turísticos em Poços de Caldas com o guia credenciado Paulo Rogério."
+      content="Agência Paulo Rogério Tur – Excursões, city tour e passeios guiados em Poços de Caldas – MG. Roteiros personalizados para grupos, famílias, terceira idade e agências de viagens de todo o Brasil."
     />
     <meta
       name="keywords"
-      content="turismo poços de caldas, excursões poços de caldas, paulo rogerio tur, city tour poços de caldas"
+      content="agência de turismo poços de caldas, excursões poços de caldas, city tour poços de caldas, guia turístico poços de caldas, paulo rogerio tur, roteiros em poços de caldas, grupos de terceira idade, ônibus de excursão poços de caldas"
     />
-    <meta name="author" content="Paulo Rogério Tur" />
+    <meta name="author" content="Agência Paulo Rogério Tur" />
+    <meta name="robots" content="index,follow" />
 
-    <!-- FAVICON (opcional) -->
-    <link rel="icon" type="image/png" href="/imagens/favicon.png" />
+    <!-- CANONICAL -->
+    <link
+      rel="canonical"
+      href="https://agenciapaulorogeriotur.com.br/"
+    />
 
-    <!-- GOOGLE MAPS API (COM SUA CHAVE) -->
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfPYSxz-TTTvvpOQPvJiFfrFS-uY_ePJA&libraries=places"
-      defer
-    ></script>
+    <!-- FAVICON (ajuste se quiser outra imagem) -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="/imagens/guia-paulo-rogerio-pocos-de-caldas-turistas.jpg"
+    />
 
-    <!-- Importação do React/Vite -->
-    <script type="module" src="/src/main.tsx"></script>
+    <!-- OPEN GRAPH / COMPARTILHAMENTO FACEBOOK / WHATSAPP -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Agência Paulo Rogério Tur" />
+    <meta
+      property="og:title"
+      content="Agência Paulo Rogério Tur – Excursões e City Tour em Poços de Caldas"
+    />
+    <meta
+      property="og:description"
+      content="City tour, excursões e passeios guiados em Poços de Caldas com o guia credenciado Paulo Rogério. Atendimento para agências, grupos, famílias e terceira idade."
+    />
+    <meta
+      property="og:url"
+      content="https://agenciapaulorogeriotur.com.br/"
+    />
+    <meta
+      property="og:image"
+      content="https://agenciapaulorogeriotur.com.br/imagens/zoo-das-aves-pocos-de-caldas-flamingos.jpg"
+    />
 
-    <!-- CSS principal -->
-    <link rel="stylesheet" href="/src/styles.css" />
+    <!-- TWITTER CARD -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Agência Paulo Rogério Tur – Excursões e City Tour em Poços de Caldas"
+    />
+    <meta
+      name="twitter:description"
+      content="Passeios guiados, city tour e excursões completas em Poços de Caldas – MG, com roteiros personalizados para grupos e famílias."
+    />
+    <meta
+      name="twitter:image"
+      content="https://agenciapaulorogeriotur.com.br/imagens/zoo-das-aves-pocos-de-caldas-flamingos.jpg"
+    />
+
+    <!-- TEMA DO NAVEGADOR NO CELULAR -->
+    <meta name="theme-color" content="#007bff" />
+
+    <!-- JSON-LD – DADOS ESTRUTURADOS -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "TravelAgency",
+        "name": "Agência Paulo Rogério Tur",
+        "description": "Agência de turismo em Poços de Caldas – MG, especializada em excursões, city tour e roteiros personalizados com o guia credenciado Paulo Rogério.",
+        "url": "https://agenciapaulorogeriotur.com.br/",
+        "telephone": "+55-35-98895-1441",
+        "priceRange": "$$",
+        "image": "https://agenciapaulorogeriotur.com.br/imagens/guia-paulo-rogerio-pocos-de-caldas-turistas.jpg",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Rua Guiseppe Maiochi, 217",
+          "addressLocality": "Poços de Caldas",
+          "addressRegion": "MG",
+          "postalCode": "37704-316",
+          "addressCountry": "BR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -21.78,
+          "longitude": -46.56
+        },
+        "areaServed": [
+          "Poços de Caldas",
+          "Sul de Minas",
+          "Interior de São Paulo",
+          "Excursões de todo o Brasil"
+        ],
+        "sameAs": [
+          "https://www.instagram.com/paulorogeriotilapia",
+          "https://www.facebook.com/paulorogeriotur"
+        ]
+      }
+    </script>
+
+    <!-- ESTILOS DIRETO NO INDEX PARA SIMPLICIDADE -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: #f7f7f7;
+        color: #222;
+        line-height: 1.6;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .page {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .container {
+        width: 90%;
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+
+      header {
+        background: #ffffff;
+        border-bottom: 1px solid #e2e2e2;
+        position: sticky;
+        top: 0;
+        z-index: 50;
+      }
+
+      .header-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 14px 0;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .logo img {
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .logo-title {
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+
+      .logo-subtitle {
+        font-size: 0.85rem;
+        color: #444;
+      }
+
+      nav a {
+        margin-left: 20px;
+        font-weight: 500;
+        color: #004aad;
+      }
+
+      nav a:hover {
+        text-decoration: underline;
+      }
+
+      .hero {
+        background: linear-gradient(135deg, #007bff, #00a8d6);
+        padding: 50px 0;
+        color: #fff;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 30px;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+        font-weight: 700;
+      }
+
+      .hero h1 span {
+        color: #ffe100;
+      }
+
+      .hero p {
+        margin-top: 10px;
+      }
+
+      .hero ul {
+        list-style: none;
+        margin-top: 10px;
+      }
+
+      .hero li {
+        margin-bottom: 6px;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 12px 20px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: 600;
+        margin-top: 14px;
+      }
+
+      .btn-primary {
+        background: #25d366;
+        color: #fff;
+      }
+
+      .hero-note {
+        margin-top: 10px;
+        font-size: 0.9rem;
+      }
+
+      .hero-card {
+        background: #fff;
+        border-radius: 12px;
+        padding: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        color: #222;
+      }
+
+      .hero-card img {
+        width: 100%;
+        border-radius: 10px;
+        object-fit: cover;
+      }
+
+      .hero-caption {
+        margin-top: 8px;
+        font-size: 0.9rem;
+      }
+
+      .section {
+        padding: 50px 0;
+      }
+
+      .section-title {
+        text-align: center;
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+        color: #003366;
+      }
+
+      .grid {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      }
+
+      .card {
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+      }
+
+      .card-body {
+        padding: 16px;
+      }
+
+      .card-body h3 {
+        margin-bottom: 8px;
+      }
+
+      .card-duration {
+        margin-top: 10px;
+        font-weight: bold;
+        color: #004aad;
+      }
+
+      .highlights {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      }
+
+      .highlight-item {
+        padding: 20px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .contact {
+        display: grid;
+        grid-template-columns: 1fr 350px;
+        gap: 20px;
+      }
+
+      .contact-card {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      .contact-extra {
+        margin-top: 15px;
+        font-size: 0.9rem;
+      }
+
+      /* MAPA */
+      .map-section {
+        padding: 40px 0 60px;
+        background: #f1f5f9;
+      }
+
+      .map-box {
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+        padding: 18px;
+      }
+
+      .map-box h3 {
+        margin-bottom: 10px;
+        color: #003366;
+      }
+
+      #map {
+        width: 100%;
+        height: 320px;
+        border-radius: 10px;
+      }
+
+      footer {
+        background: #002040;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        margin-top: 40px;
+      }
+
+      .whatsapp-float {
+        position: fixed;
+        bottom: 18px;
+        right: 18px;
+        background: #25d366;
+        color: white;
+        width: 55px;
+        height: 55px;
+        font-size: 28px;
+        text-align: center;
+        line-height: 55px;
+        border-radius: 50%;
+        text-decoration: none;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      }
+
+      /* OUTDOOR NATAL DE LUZ (NOV – DEZ, ESTÁTICO) */
+      .outdoor {
+        background: linear-gradient(90deg, #3f51b5, #9c27b0);
+        color: #fff;
+        padding: 16px 0;
+      }
+
+      .outdoor-box {
+        border-radius: 10px;
+        padding: 14px 18px;
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .outdoor-main {
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+      }
+
+      .outdoor-icon {
+        font-size: 2rem;
+      }
+
+      .outdoor h2 {
+        font-size: 1.2rem;
+        margin-bottom: 4px;
+      }
+
+      .outdoor-list {
+        margin-left: 1.5rem;
+        font-size: 0.95rem;
+      }
+
+      .btn-outdoor {
+        margin-top: 6px;
+        background: #ffe100;
+        color: #5a4100;
+      }
+
+      @media (max-width: 768px) {
+        .hero-grid,
+        .contact {
+          grid-template-columns: 1fr;
+        }
+
+        nav a {
+          margin-left: 12px;
+        }
+
+        #map {
+          height: 260px;
+        }
+      }
+    </style>
   </head>
 
   <body>
-    <div id="root"></div>
+    <div class="page">
+      <header>
+        <div class="container header-inner">
+          <div class="logo">
+            <img
+              src="/imagens/guia-paulo-rogerio-pocos-de-caldas-turistas.jpg"
+              alt="Guia Paulo Rogério com turistas"
+            />
+            <div>
+              <div class="logo-title">Paulo Rogério Tur</div>
+              <div class="logo-subtitle">Excursões &amp; Turismo</div>
+            </div>
+          </div>
+          <nav>
+            <a href="#roteiros">Roteiros</a>
+            <a href="#destaques">Destaques</a>
+            <a href="#contato">Contato</a>
+          </nav>
+        </div>
+      </header>
+
+      <!-- OUTDOOR NATAL DE LUZ -->
+      <section class="outdoor">
+        <div class="container">
+          <div class="outdoor-box">
+            <div class="outdoor-main">
+              <span class="outdoor-icon">🎄</span>
+              <div>
+                <h2>Natal de Luz em Poços de Caldas</h2>
+                <p>
+                  Em <strong>novembro e dezembro</strong> a cidade vive o clima
+                  do Natal de Luz. O nosso
+                  <strong>City Tour Clássico</strong> inclui os principais
+                  pontos iluminados para fotos e contemplação.
+                </p>
+              </div>
+            </div>
+            <ul class="outdoor-list">
+              <li>Praça Pedro Sanches e Fonte Luminosa iluminadas</li>
+              <li>Palácio Casino, Thermas e praças decoradas</li>
+              <li>Árvores, painéis natalinos e atrações de fim de ano</li>
+            </ul>
+            <a
+              href="https://wa.me/5535988951441?text=Olá%20Paulo%20Rogério,%20quero%20aproveitar%20o%20Natal%20de%20Luz%20em%20Poços%20de%20Caldas%20no%20City%20Tour."
+              class="btn btn-outdoor"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Reservar City Tour no Natal de Luz
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <main>
+        <!-- HERO -->
+        <section class="hero">
+          <div class="container hero-grid">
+            <div>
+              <h1>
+                Excursões e passeios em Poços de Caldas
+                <span> com guia credenciado</span>
+              </h1>
+              <p>
+                City tour, grupos de terceira idade, famílias e excursões
+                personalizadas. Segurança, conforto e roteiros montados com
+                carinho por quem conhece cada canto da cidade.
+              </p>
+              <ul>
+                <li>🚌 City tour completo pela cidade</li>
+                <li>🏞️ Teleférico, Cristo Redentor, mirantes e parques</li>
+                <li>👵 Grupos de terceira idade com atenção especial</li>
+              </ul>
+              <a
+                href="https://wa.me/5535988951441?text=Olá%20Paulo%20Rogério,%20quero%20informações%20sobre%20passeios%20em%20Poços%20de%20Caldas."
+                class="btn btn-primary"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Reservar passeio pelo WhatsApp
+              </a>
+              <p class="hero-note">
+                Informe a data da viagem, número de pessoas e tipo de passeio
+                que deseja.
+              </p>
+            </div>
+            <div>
+              <div class="hero-card">
+                <img
+                  src="/imagens/capa-vista-area.jpg"
+                  alt="Vista aérea de Poços de Caldas"
+                />
+                <p class="hero-caption">
+                  Vista aérea de Poços de Caldas, ideal para planejar seu
+                  roteiro.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ROTEIROS -->
+        <section id="roteiros" class="section">
+          <div class="container">
+            <h2 class="section-title">Roteiros em Poços de Caldas</h2>
+            <div class="grid">
+              <article class="card">
+                <img
+                  src="/imagens/familia-com-guia-paulo-rogerio-no-relogio-floral.jpg"
+                  alt="City tour clássico"
+                />
+                <div class="card-body">
+                  <h3>City Tour Clássico</h3>
+                  <p>
+                    Roteiro completo pelos principais pontos turísticos:
+                    teleférico, Cristo, Centro, Recanto Japonês e muito mais.
+                  </p>
+                  <p class="card-duration">Duração média: 4 a 5 horas</p>
+                </div>
+              </article>
+              <article class="card">
+                <img
+                  src="/imagens/cristo-redentor-pocos-de-caldas-vista-aerea.jpg"
+                  alt="Passeio Serra &amp; Mirantes"
+                />
+                <div class="card-body">
+                  <h3>Passeio Serra &amp; Mirantes</h3>
+                  <p>
+                    Vista panorâmica da cidade em diferentes mirantes, com
+                    paradas para fotos e contemplação.
+                  </p>
+                  <p class="card-duration">Duração média: 3 horas</p>
+                </div>
+              </article>
+              <article class="card">
+                <img
+                  src="/imagens/fonte-dos-amores-pocos-de-caldas-1.jpg"
+                  alt="Grupos de terceira idade"
+                />
+                <div class="card-body">
+                  <h3>Grupos de Terceira Idade</h3>
+                  <p>
+                    Roteiros adaptados, com paradas estratégicas, conforto e
+                    acompanhamento especial.
+                  </p>
+                  <p class="card-duration">
+                    Roteiro personalizado conforme o grupo
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- DESTAQUES -->
+        <section id="destaques" class="section">
+          <div class="container">
+            <h2 class="section-title">Destaques para sua excursão</h2>
+            <div class="highlights">
+              <div class="highlight-item">
+                <h3>Guia credenciado</h3>
+                <p>
+                  Atendimento feito pelo guia Paulo Rogério, com experiência em
+                  receber grupos de diversas cidades do Brasil.
+                </p>
+              </div>
+              <div class="highlight-item">
+                <h3>Roteiros flexíveis</h3>
+                <p>
+                  Ajustamos o passeio conforme o tempo de estadia, faixa etária
+                  e interesse do grupo.
+                </p>
+              </div>
+              <div class="highlight-item">
+                <h3>Transporte confortável</h3>
+                <p>
+                  Parcerias com empresas de transporte regularizadas, ônibus e
+                  vans com segurança e conforto.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CONTATO -->
+        <section id="contato" class="section">
+          <div class="container">
+            <h2 class="section-title">Reserve seu passeio</h2>
+            <div class="contact">
+              <div>
+                <p>
+                  Envie uma mensagem com as informações da sua excursão e
+                  retornaremos com valores e opções de roteiro:
+                </p>
+                <ul>
+                  <li>📅 Data da viagem</li>
+                  <li>👥 Número de pessoas</li>
+                  <li>
+                    🚍 Tipo de grupo (família, amigos, igreja, terceira idade,
+                    etc.)
+                  </li>
+                  <li>🏨 Se já possui hospedagem ou precisa de indicação</li>
+                </ul>
+
+                <a
+                  href="https://wa.me/5535988951441?text=Olá%20Paulo%20Rogério,%20quero%20informações%20sobre%20um%20passeio%20em%20Poços%20de%20Caldas."
+                  class="btn"
+                  style="border: 2px solid #25d366; color: #25d366"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Falar com Paulo Rogério no WhatsApp
+                </a>
+
+                <p class="contact-extra">
+                  Atendimento: <strong>(35) 98895-1441</strong> <br />
+                  CNPJ: <strong>56.689.000/0001-03</strong> <br />
+                  Cadastro Ministério do Turismo:
+                  <strong>13.566.523.51-0</strong>
+                </p>
+
+                <p class="contact-extra">
+                  Siga nas redes sociais: <br />
+                  <a
+                    href="https://www.instagram.com/paulorogeriotilapia"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Instagram @paulorogeriotilapia
+                  </a>
+                  •
+                  <a
+                    href="https://www.facebook.com/paulorogeriotur"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Facebook /paulorogeriotur
+                  </a>
+                </p>
+              </div>
+
+              <div class="contact-card">
+                <h3>Endereço de referência</h3>
+                <p>
+                  Rua Guiseppe Maiochi, 217<br />
+                  Poços de Caldas – MG<br />
+                  CEP 37704-316
+                </p>
+                <p class="contact-extra">
+                  Atendemos com horário agendado. Consulte disponibilidade para
+                  o período da sua viagem.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- MAPA -->
+        <section class="map-section">
+          <div class="container">
+            <div class="map-box">
+              <h3>Localização no mapa</h3>
+              <p style="margin-bottom: 10px; font-size: 0.95rem;">
+                Veja a referência da agência em Poços de Caldas. O ponto de
+                encontro pode ser ajustado conforme a programação do seu grupo.
+              </p>
+              <div id="map"></div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <p>© <span id="ano"></span> Agência Paulo Rogério Tur.</p>
+        <p>CNPJ: 56.689.000/0001-03 • Cadastro MT: 13.566.523.51-0</p>
+        <p>Poços de Caldas – MG • Brasil</p>
+      </footer>
+
+      <a
+        href="https://wa.me/5535988951441?text=Olá%20Paulo%20Rogério,%20quero%20fazer%20um%20roteiro%20em%20Poços%20de%20Caldas."
+        class="whatsapp-float"
+        target="_blank"
+        rel="noreferrer"
+      >
+        💬
+      </a>
+    </div>
+
+    <script>
+      // coloca o ano atual no rodapé
+      document.getElementById("ano").textContent =
+        new Date().getFullYear().toString();
+
+      // inicializa o mapa (Google Maps)
+      function initMap() {
+        const pos = { lat: -21.78, lng: -46.56 }; // região de Poços de Caldas
+
+        const map = new google.maps.Map(document.getElementById("map"), {
+          center: pos,
+          zoom: 14,
+        });
+
+        new google.maps.Marker({
+          position: pos,
+          map,
+          title: "Referência – Agência Paulo Rogério Tur",
+        });
+      }
+
+      // deixa a função acessível pro callback do Maps
+      window.initMap = initMap;
+    </script>
+
+    <!-- GOOGLE MAPS API (SUA CHAVE) -->
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfPYSxz-TTTvvpOQPvJifFrFS-uY_ePJA&callback=initMap"
+    ></script>
   </body>
 </html>
