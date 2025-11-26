@@ -2,909 +2,128 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
 
-    <title>Agência Paulo Rogério Tur – Excursões e Turismo em Poços de Caldas</title>
+    <title>
+      Agência Paulo Rogério Tur – Excursões e City Tour em Poços de Caldas – MG
+    </title>
 
-    <!-- SEO -->
+    <!-- SEO BÁSICO -->
     <meta
       name="description"
-      content="Agência Paulo Rogério Tur – Passeios, excursões guiadas, city tour, grupos de terceira idade e turismo completo em Poços de Caldas e região, com guia credenciado e roteiros personalizados."
+      content="Agência Paulo Rogério Tur – Excursões, city tour e passeios guiados em Poços de Caldas – MG. Roteiros personalizados para grupos, famílias, terceira idade e agências de viagens de todo o Brasil."
     />
     <meta
       name="keywords"
-      content="turismo poços de caldas, excursões poços de caldas, agência de turismo poços de caldas, paulo rogerio tur, passeios guiados, city tour poços, teleférico poços de caldas, fonte dos amores, recanto japonês, pedra balão"
+      content="agência de turismo poços de caldas, excursões poços de caldas, city tour poços de caldas, guia turístico poços de caldas, paulo rogerio tur, roteiros em poços de caldas, grupos de terceira idade, ônibus de excursão poços de caldas"
     />
     <meta name="author" content="Agência Paulo Rogério Tur" />
     <meta name="robots" content="index,follow" />
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Agência Paulo Rogério Tur – Excursões em Poços de Caldas" />
+    <!-- CANONICAL -->
+    <link
+      rel="canonical"
+      href="https://agenciapaulorogeriotur.com.br/"
+    />
+
+    <!-- FAVICON (ajuste o caminho se precisar) -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="/imagens/guia-paulo-rogerio-pocos-de-caldas-turistas.jpg"
+    />
+
+    <!-- OPEN GRAPH / COMPARTILHAMENTO FACEBOOK / WHATSAPP -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:locale"
+      content="pt_BR"
+    />
+    <meta
+      property="og:site_name"
+      content="Agência Paulo Rogério Tur"
+    />
+    <meta
+      property="og:title"
+      content="Agência Paulo Rogério Tur – Excursões e City Tour em Poços de Caldas"
+    />
     <meta
       property="og:description"
-      content="Conheça Poços de Caldas com quem entende de turismo: passeios guiados, city tour, águas termais, natureza, cultura e muito mais."
+      content="City tour, excursões e passeios guiados em Poços de Caldas com o guia credenciado Paulo Rogério. Atendimento para agências, grupos, famílias e terceira idade."
     />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://agencia-paulo-rogerio-tur.vercel.app/" />
-    <meta property="og:image" content="imagens/aguas-termais-pocos-de-caldas.jpg" />
-
-    <!-- Favicon (se tiver, é só trocar o caminho) -->
-    <link rel="icon" type="image/jpeg" href="imagens/guia-paulo-rogerio-pocos-de-caldas-turistas.jpg" />
-
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
+    <meta
+      property="og:url"
+      content="https://agenciapaulorogeriotur.com.br/"
+    />
+    <!-- Certifique-se de que esta imagem existe na pasta /imagens -->
+    <meta
+      property="og:image"
+      content="https://agenciapaulorogeriotur.com.br/imagens/zoo-das-aves-pocos-de-caldas-flamingos.jpg"
     />
 
-    <!-- Estilos gerais -->
-    <style>
-      body {
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-        background-color: #f7f7f7;
-      }
+    <!-- TWITTER CARD -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Agência Paulo Rogério Tur – Excursões e City Tour em Poços de Caldas"
+    />
+    <meta
+      name="twitter:description"
+      content="Passeios guiados, city tour e excursões completas em Poços de Caldas – MG, com roteiros personalizados para grupos e famílias."
+    />
+    <meta
+      name="twitter:image"
+      content="https://agenciapaulorogeriotur.com.br/imagens/zoo-das-aves-pocos-de-caldas-flamingos.jpg"
+    />
 
-      .navbar {
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-      }
+    <!-- TEMA DO NAVEGADOR NO CELULAR -->
+    <meta name="theme-color" content="#007bff" />
 
-      .hero-section {
-        background: linear-gradient(to bottom right, #004aad, #008f7a);
-        color: #fff;
-        padding: 7rem 0 5rem;
+    <!-- JSON-LD – DADOS ESTRUTURADOS LOCALBUSINESS / AGÊNCIA DE TURISMO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "TravelAgency",
+        "name": "Agência Paulo Rogério Tur",
+        "description": "Agência de turismo em Poços de Caldas – MG, especializada em excursões, city tour e roteiros personalizados com o guia credenciado Paulo Rogério.",
+        "url": "https://agenciapaulorogeriotur.com.br/",
+        "telephone": "+55-35-98895-1441",
+        "priceRange": "$$",
+        "image": "https://agenciapaulorogeriotur.com.br/imagens/guia-paulo-rogerio-pocos-de-caldas-turistas.jpg",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Rua Guiseppe Maiochi, 217",
+          "addressLocality": "Poços de Caldas",
+          "addressRegion": "MG",
+          "postalCode": "37704-316",
+          "addressCountry": "BR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -21.78,
+          "longitude": -46.56
+        },
+        "areaServed": [
+          "Poços de Caldas",
+          "Sul de Minas",
+          "Interior de São Paulo",
+          "Excursões de todo o Brasil"
+        ],
+        "sameAs": [
+          "https://www.instagram.com/paulorogeriotilapia",
+          "https://www.facebook.com/paulorogeriotur"
+        ]
       }
-
-      .hero-section h1 {
-        font-weight: 700;
-      }
-
-      .hero-section p {
-        font-size: 1.05rem;
-      }
-
-      .hero-badge {
-        font-size: 0.9rem;
-        background: rgba(255, 255, 255, 0.12);
-        border-radius: 999px;
-        padding: 0.25rem 0.75rem;
-        display: inline-flex;
-        align-items: center;
-        gap: 0.4rem;
-      }
-
-      .hero-badge span {
-        font-size: 1.1rem;
-      }
-
-      .btn-whats {
-        background-color: #25d366;
-        border-color: #25d366;
-        font-weight: 600;
-      }
-
-      .btn-whats:hover {
-        background-color: #1ebe57;
-        border-color: #1ebe57;
-      }
-
-      .section-title {
-        font-weight: 700;
-      }
-
-      .card-icon {
-        font-size: 2.2rem;
-        margin-bottom: 0.5rem;
-      }
-
-      footer {
-        background-color: #111827;
-        color: #e5e7eb;
-        padding: 2rem 0 1rem;
-        font-size: 0.95rem;
-      }
-
-      footer a {
-        color: #9ca3af;
-        text-decoration: none;
-      }
-
-      footer a:hover {
-        color: #fff;
-      }
-
-      /* Clima */
-      .weather-card {
-        background: #ffffff;
-        border-radius: 0.75rem;
-        padding: 1rem 1.25rem;
-        box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
-      }
-
-      .weather-temp {
-        font-size: 2.2rem;
-        font-weight: 700;
-      }
-
-      /* Banner de cookies */
-      .cookie-banner {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: #111827;
-        color: #f9fafb;
-        padding: 1rem 1.5rem;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
-        gap: 0.75rem;
-        z-index: 9999;
-      }
-
-      .cookie-banner small {
-        color: #d1d5db;
-      }
-
-      .cookie-banner .tilapia {
-        font-size: 1.5rem;
-        margin-right: 0.25rem;
-      }
-
-      @media (max-width: 576px) {
-        .hero-section {
-          padding-top: 6rem;
-        }
-      }
-    </style>
+    </script>
   </head>
 
   <body>
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
-      <div class="container">
-        <a class="navbar-brand fw-bold" href="#">
-          Agência <span class="text-primary">Paulo Rogério Tur</span>
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Alternar navegação"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
-            <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
-            <li class="nav-item"><a class="nav-link" href="#pontos-turisticos">Pontos turísticos</a></li>
-            <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <div id="root"></div>
 
-    <!-- HERO -->
-    <section class="hero-section">
-      <div class="container">
-        <div class="row align-items-center g-4">
-          <div class="col-lg-6">
-            <div class="hero-badge mb-3">
-              <span>⭐</span>
-              <span>Guia credenciado em Poços de Caldas – MG</span>
-            </div>
-            <h1 class="mb-3">
-              Descubra Poços de Caldas com a<br />
-              Agência <span class="text-warning">Paulo Rogério Tur</span>
-            </h1>
-            <p class="mb-4">
-              Passeios guiados, excursões, city tour e roteiros completos para grupos, famílias e terceira idade.
-              Segurança, acolhimento e experiência de quem conhece cada detalhe da cidade.
-            </p>
-            <div class="d-flex flex-wrap gap-2 align-items-center">
-              <a
-                href="https://wa.me/5535988951441?text=Olá%20Paulo%20Rogério,%20quero%20informações%20sobre%20passeios%20em%20Poços%20de%20Caldas."
-                class="btn btn-whats btn-lg"
-                target="_blank"
-                rel="noopener"
-              >
-                💬 Reservar pelo WhatsApp
-              </a>
-              <span class="small text-light opacity-75">Atendimento para agências, grupos e excursões.</span>
-            </div>
-          </div>
-
-          <div class="col-lg-5 offset-lg-1">
-            <div class="bg-white rounded-4 shadow-lg p-3">
-              <img
-                src="imagens/guia-paulo-rogerio-pocos-de-caldas-turistas.jpg"
-                alt="Guia Paulo Rogério com grupo de turistas em Poços de Caldas"
-                class="img-fluid rounded-4 mb-3"
-              />
-              <p class="mb-1 fw-semibold text-dark">
-                Roteiros personalizados em Poços de Caldas e região, com acompanhamento do guia Paulo Rogério.
-              </p>
-              <p class="mb-0 text-muted small">
-                Teleférico, Cristo, Recanto Japonês, Zoo das Aves, águas termais, cachoeiras e muito mais – tudo
-                organizado para você aproveitar o melhor da cidade.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SOBRE -->
-    <section id="sobre" class="py-5 bg-white">
-      <div class="container">
-        <div class="row g-4 align-items-center">
-          <div class="col-lg-6">
-            <h2 class="section-title mb-3">Sobre a Agência Paulo Rogério Tur</h2>
-            <p class="text-muted">
-              A Agência Paulo Rogério Tur atua há anos na recepção de grupos e excursões em Poços de Caldas – MG,
-              oferecendo city tour completo, passeios temáticos e acompanhamento especializado para todas as idades.
-            </p>
-            <p class="text-muted">
-              Trabalhamos com guias credenciados, veículos parceiros e roteiros pensados para que o visitante aproveite
-              ao máximo as belezas naturais, culturais e históricas da cidade.
-            </p>
-            <ul class="text-muted mb-0">
-              <li>Atendimento a agências de viagem de todo o Brasil</li>
-              <li>Grupos de terceira idade, famílias, igrejas e excursões escolares</li>
-              <li>Roteiros personalizados conforme o tempo de estadia do grupo</li>
-            </ul>
-          </div>
-          <div class="col-lg-6">
-            <div class="row g-3">
-              <div class="col-6">
-                <img
-                  src="imagens/capa-vista-area-1.jpg"
-                  class="img-fluid rounded-4 shadow-sm"
-                  alt="Vista aérea de Poços de Caldas"
-                  loading="lazy"
-                />
-              </div>
-              <div class="col-6 d-flex flex-column gap-3">
-                <img
-                  src="imagens/cascasta-veu-das-noivas-com-turistas.jpg"
-                  class="img-fluid rounded-4 shadow-sm"
-                  alt="Turistas em cachoeira de Poços de Caldas com a Agência Paulo Rogério Tur"
-                  loading="lazy"
-                />
-                <img
-                  src="imagens/com-as-autoridades-da-cidade.jpg"
-                  class="img-fluid rounded-4 shadow-sm"
-                  alt="Guia Paulo Rogério com autoridades locais de Poços de Caldas"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SERVIÇOS -->
-    <section id="servicos" class="py-5 bg-light">
-      <div class="container">
-        <header class="mb-4 text-center">
-          <h2 class="section-title">Serviços de Turismo</h2>
-          <p class="text-muted mb-0">
-            Roteiros organizados para que o seu grupo aproveite Poços de Caldas com conforto e segurança.
-          </p>
-        </header>
-
-        <div class="row g-4">
-          <div class="col-md-4">
-            <div class="card border-0 shadow-sm h-100">
-              <div class="card-body">
-                <div class="card-icon">🚌</div>
-                <h5 class="card-title">City tour completo</h5>
-                <p class="card-text text-muted">
-                  Passeio guiado pelos principais pontos turísticos: Cristo, Teleférico, Recanto Japonês, Fonte dos
-                  Amores, Zoo das Aves, Relógio Floral e muito mais.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="card border-0 shadow-sm h-100">
-              <div class="card-body">
-                <div class="card-icon">👵</div>
-                <h5 class="card-title">Grupos de terceira idade</h5>
-                <p class="card-text text-muted">
-                  Atenção especial para melhor idade, com roteiro tranquilo, paradas estratégicas, acessibilidade e
-                  acompanhamento em todo o percurso.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="card border-0 shadow-sm h-100">
-              <div class="card-body">
-                <div class="card-icon">🏨</div>
-                <h5 class="card-title">Apoio para excursões</h5>
-                <p class="card-text text-muted">
-                  Recepção de ônibus e vans, apoio na hospedagem, orientações sobre a cidade e acompanhamento durante
-                  toda a estadia do grupo.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PONTOS TURÍSTICOS (SEU CÓDIGO) -->
-    <section id="pontos-turisticos" class="py-5 bg-light">
-      <div class="container">
-        <header class="mb-5 text-center">
-          <h2 class="fw-bold">Pontos turísticos de Poços de Caldas</h2>
-          <p class="text-muted mb-0">
-            Conheça os principais atrativos da cidade com a Agência Paulo Rogério Tur: natureza, cultura, história,
-            águas termais e muito mais.
-          </p>
-        </header>
-
-        <!-- CAPA / VISTA GERAL -->
-        <div class="mb-5">
-          <h3 class="h4 fw-semibold mb-3">Vista geral de Poços de Caldas</h3>
-          <div class="row g-4">
-            <div class="col-md-12">
-              <img
-                src="imagens/aguas-termais-pocos-de-caldas.jpg"
-                class="img-fluid rounded shadow-sm w-100"
-                alt="Vista geral de Poços de Caldas com as montanhas ao fundo"
-                loading="lazy"
-              />
-            </div>
-          </div>
-        </div>
-
-        <!-- CACHOEIRAS -->
-        <div class="mb-5">
-          <h3 class="h4 fw-semibold mb-3">Cachoeiras e natureza</h3>
-          <div class="row g-4">
-            <div class="col-md-6">
-              <img
-                src="imagens/cascata-das-antas-pocos-de-caldas.jpg"
-                class="img-fluid rounded shadow-sm w-100"
-                alt="Cascata das Antas em Poços de Caldas"
-                loading="lazy"
-              />
-            </div>
-            <div class="col-md-6">
-              <img
-                src="imagens/parque-do-cristo-mirante-pocos-de-caldas.jpg"
-                class="img-fluid rounded shadow-sm w-100"
-                alt="Vista do Parque do Cristo em Poços de Caldas"
-                loading="lazy"
-              />
-            </div>
-          </div>
-        </div>
-
-        <!-- CRISTO REDENTOR E MIRANTE SANTA RITA -->
-        <div class="mb-5">
-          <h3 class="h4 fw-semibold mb-3">Mirantes e vistas panorâmicas</h3>
-          <div class="row g-4">
-            <div class="col-md-6">
-              <img
-                src="imagens/cristo-redentor-pocos-de-caldas-vista-aerea.jpg"
-                class="img-fluid rounded shadow-sm w-100"
-                alt="Vista aérea do Cristo Redentor em Poços de Caldas"
-                loading="lazy"
-              />
-            </div>
-            <div class="col-md-6">
-              <img
-                src="imagens/mirante-santa-rita-panoramica.jpg"
-                class="img-fluid rounded shadow-sm w-100"
-                alt="Vista panorâmica do Mirante de Santa Rita em Poços de Caldas"
-                loading="lazy"
-              />
-            </div>
-          </div>
-
-          <div class="row g-4 mt-3">
-            <div class="col-md-4">
-              <img
-                src="imagens/mirante-santa-rita-pocos-de-caldas-1.jpg"
-                class="img-fluid rounded shadow-sm w-100"
-                alt="Mirante de Santa Rita com vista para a cidade de Poços de Caldas"
-                loading="lazy"
-              />
-            </div>
-            <div class="col-md-4">
-              <img
-                src="imagens/mirante-santa-rita-pocos-de-caldas-2.jpg"
-                class="img-fluid rounded shadow-sm w-100"
-                alt="Turista apreciando a vista do Mirante de Santa Rita em Poços de Caldas"
-                loading="lazy"
-              />
-            </div>
-            <div class="col-md-4">
-              <img
-                src="imagens/mirante-santa-rita-vista.jpg"
-                class="img-fluid rounded shadow-sm w-100"
-                alt="Vista do alto do Mirante de Santa Rita em Poços de Caldas"
-                loading="lazy"
-              />
-            </div>
-          </div>
-        </div>
-
-        <!-- FONTES E PRAÇA DOS MACACOS -->
-        <div class="mb-5">
-          <h3 class="h4 fw-semibold mb-3">Fontes e Praça dos Macacos</h3>
-          <div class="row g-4">
-            <div class="col-md-4">
-              <img
-                src="imagens/fonte-dos-amores-pocos-de-caldas-1.jpg"
-                class="img-fluid rounded shadow-sm w-100"
-                alt="Fonte dos Amores em Poços de Caldas com vegetação ao redor"
-                loading="lazy"
-              />
-            </div>
-            <div class="col-md-4">
-              <img
-                src="imagens/fonte-dos-amores-pocos-de-caldas-2.jpg"
-                class="img-fluid rounded shadow-sm w-100"
-                alt="Trilha de acesso à Fonte dos Amores em Poços de Caldas"
-                loading="lazy"
-              />
-            </div>
-            <div class="col-md-4">
-              <img
-                src="imagens/fonte-dos-amores-pocos-de-caldas-3.jpg"
-                class="img-fluid rounded shadow-sm w-100"
-                alt="Escultura na Fonte dos Amores em Poços de Caldas"
-                loading="lazy"
-              />
-            </div>
-          </div>
-
-          <div class="row g-4 mt-3">
-            <div class="col-md-4">
-              <img
-                src="imagens/fonte-dos-macacos-aguas-sulfurosas.jpg"
-                class="img-fluid rounded shadow-sm w-100"
-                alt="Fonte dos Macacos com águas sulfurosas em Poços de Caldas"
-                loading="lazy"
-              />
-            </div>
-            <div class="col-md-4">
-              <img
-                src="imagens/ponte-na-praca-dos-macacos.jpg"
-                class="img-fluid rounded shadow-sm w-100"
-                alt="Ponte na Praça dos Macacos em Poços de Caldas"
-                loading="lazy"
-              />
-            </div>
-            <div class="col-md-4">
-              <img
-                src="imagens/estacao-teleferico-pocos-de-caldas.jpg"
-                class="img-fluid rounded shadow-sm w-100"
-                alt="Estação do teleférico de Poços de Caldas"
-                loading="lazy"
-              />
-            </div>
-          </div>
-        </div>
-
-        <!-- RECANTO JAPONÊS -->
-        <div class="mb-5">
-          <h3 class="h4 fw-semibold mb-3">Recanto Japonês</h3>
-          <div class="row g-4">
-            <div class="col-md-4">
-              <img
-                src="imagens/recanto-japones-pocos-de-caldas-casa-1.jpg"
-                class="img-fluid rounded shadow-sm w-100"
-                alt="Casa japonesa no Recanto Japonês em Poços de Caldas"
-                loading="lazy"
-              />
-            </div>
-            <div class="col-md-4">
-              <img
-                src="imagens/recanto-japones-pocos-de-caldas-casa-2.jpg"
-                class="img-fluid rounded shadow-sm w-100"
-                alt="Estrutura tradicional no Recanto Japonês em Poços de Caldas"
-                loading="lazy"
-              />
-            </div>
-            <div class="col-md-4">
-              <img
-                src="imagens/recanto-japones-pocos-de-caldas-casa-3.jpg"
-                class="img-fluid rounded shadow-sm w-100"
-                alt="Arquitetura típica no Recanto Japonês em Poços de Caldas"
-                loading="lazy"
-              />
-            </div>
-          </div>
-
-          <div class="row g-4 mt-3">
-            <div class="col-md-3">
-              <img
-                src="imagens/recanto-japones-pocos-de-caldas-jardim-1.jpg"
-                class="img-fluid rounded shadow-sm w-100"
-                alt="Jardim do Recanto Japonês em Poços de Caldas"
-                loading="lazy"
-              />
-            </div>
-            <div class="col-md-3">
-              <img
-                src="imagens/recanto-japones-pocos-de-caldas-jardim-2.jpg"
-                class="img-fluid rounded shadow-sm w-100"
-                alt="Caminho no jardim do Recanto Japonês em Poços de Caldas"
-                loading="lazy"
-              />
-            </div>
-            <div class="col-md-3">
-              <img
-                src="imagens/recanto-japones-pocos-de-caldas-jardim-3.jpg"
-                class="img-fluid rounded shadow-sm w-100"
-                alt="Detalhes do jardim do Recanto Japonês em Poços de Caldas"
-                loading="lazy"
-              />
-            </div>
-            <div class="col-md-3">
-              <img
-                src="imagens/recanto-japones-pocos-de-caldas-lago-carpa.jpg"
-                class="img-fluid rounded shadow-sm w-100"
-                alt="Lago com carpas no Recanto Japonês em Poços de Caldas"
-                loading="lazy"
-              />
-            </div>
-          </div>
-        </div>
-
-        <!-- PEDRA BALÃO -->
-        <div class="mb-5">
-          <h3 class="h4 fw-semibold mb-3">Pedra Balão</h3>
-          <div class="row g-4">
-            <div class="col-md-4">
-              <img
-                src="imagens/pedra-balao-pocos-de-caldas-1.jpg"
-                class="img-fluid rounded shadow-sm w-100"
-                alt="Formação rochosa da Pedra Balão em Poços de Caldas"
-                loading="lazy"
-              />
-            </div>
-            <div class="col-md-4">
-              <img
-                src="imagens/pedra-balao-pocos-de-caldas-2.jpg"
-                class="img-fluid rounded shadow-sm w-100"
-                alt="Turistas na Pedra Balão em Poços de Caldas"
-                loading="lazy"
-              />
-            </div>
-            <div class="col-md-4">
-              <img
-                src="imagens/pedra-balao-pocos-de-caldas-3.jpg"
-                class="img-fluid rounded shadow-sm w-100"
-                alt="Vista lateral da Pedra Balão em Poços de Caldas"
-                loading="lazy"
-              />
-            </div>
-          </div>
-        </div>
-
-        <!-- TELEFÉRICO -->
-        <div class="mb-5">
-          <h3 class="h4 fw-semibold mb-3">Teleférico de Poços de Caldas</h3>
-          <div class="row g-4">
-            <div class="col-md-3">
-              <img
-                src="imagens/teleferico-pocos-de-caldas-amarelo.jpg"
-                class="img-fluid rounded shadow-sm w-100"
-                alt="Cabine amarela do teleférico de Poços de Caldas"
-                loading="lazy"
-              />
-            </div>
-            <div class="col-md-3">
-              <img
-                src="imagens/teleferico-pocos-de-caldas-azul.jpg"
-                class="img-fluid rounded shadow-sm w-100"
-                alt="Cabine azul do teleférico de Poços de Caldas"
-                loading="lazy"
-              />
-            </div>
-            <div class="col-md-3">
-              <img
-                src="imagens/teleferico-pocos-de-caldas-rosa.jpg"
-                class="img-fluid rounded shadow-sm w-100"
-                alt="Cabine rosa do teleférico de Poços de Caldas"
-                loading="lazy"
-              />
-            </div>
-            <div class="col-md-3">
-              <img
-                src="imagens/teleferico-pocos-de-caldas-verde.jpg"
-                class="img-fluid rounded shadow-sm w-100"
-                alt="Cabine verde do teleférico de Poços de Caldas"
-                loading="lazy"
-              />
-            </div>
-          </div>
-
-          <div class="row g-4 mt-3">
-            <div class="col-md-12">
-              <img
-                src="imagens/teleferico-pocos-de-caldas-vista-aerea.jpg"
-                class="img-fluid rounded shadow-sm w-100"
-                alt="Teleférico com vista aérea de Poços de Caldas"
-                loading="lazy"
-              />
-            </div>
-          </div>
-        </div>
-
-        <!-- LAGO / COUNTRY CLUB -->
-        <div class="mb-5">
-          <h3 class="h4 fw-semibold mb-3">Lago e Country Club</h3>
-          <div class="row g-4">
-            <div class="col-md-6">
-              <img
-                src="imagens/lago-country-club-pocos-de-caldas.jpg"
-                class="img-fluid rounded shadow-sm w-100"
-                alt="Lago do Country Club em Poços de Caldas"
-                loading="lazy"
-              />
-            </div>
-            <div class="col-md-6">
-              <img
-                src="imagens/igreja-nossa-senhora-de-fatima-pocos-de-caldas.jpg"
-                class="img-fluid rounded shadow-sm w-100"
-                alt="Igreja Nossa Senhora de Fátima em Poços de Caldas"
-                loading="lazy"
-              />
-            </div>
-          </div>
-        </div>
-
-        <!-- ZOO DAS AVES -->
-        <div class="mb-5">
-          <h3 class="h4 fw-semibold mb-3">Zoo das Aves</h3>
-          <div class="row g-4">
-            <div class="col-md-3">
-              <img
-                src="imagens/zoo-das-aves-pocos-de-caldas-araras.jpg"
-                class="img-fluid rounded shadow-sm w-100"
-                alt="Araras coloridas no Zoo das Aves em Poços de Caldas"
-                loading="lazy"
-              />
-            </div>
-            <div class="col-md-3">
-              <img
-                src="imagens/zoo-das-aves-pocos-de-caldas-banner.jpg"
-                class="img-fluid rounded shadow-sm w-100"
-                alt="Entrada do Zoo das Aves em Poços de Caldas"
-                loading="lazy"
-              />
-            </div>
-            <div class="col-md-3">
-              <img
-                src="imagens/zoo-das-aves-pocos-de-caldas-cacatuas.jpg"
-                class="img-fluid rounded shadow-sm w-100"
-                alt="Cacatuas no Zoo das Aves em Poços de Caldas"
-                loading="lazy"
-              />
-            </div>
-            <div class="col-md-3">
-              <img
-                src="imagens/zoo-das-aves-pocos-de-caldas-flamingos.jpg"
-                class="img-fluid rounded shadow-sm w-100"
-                alt="Flamingos no Zoo das Aves em Poços de Caldas"
-                loading="lazy"
-              />
-            </div>
-          </div>
-        </div>
-
-        <!-- GUIA PAULO ROGÉRIO EM AÇÃO -->
-        <div class="mb-3">
-          <h3 class="h4 fw-semibold mb-3">Guias e atendimento personalizado</h3>
-          <div class="row g-4">
-            <div class="col-md-6">
-              <img
-                src="imagens/guia-paulo-rogerio-cristalaria.jpg"
-                class="img-fluid rounded shadow-sm w-100"
-                alt="Guia Paulo Rogério acompanhando grupo em cristalaria de Poços de Caldas"
-                loading="lazy"
-              />
-            </div>
-            <div class="col-md-6">
-              <img
-                src="imagens/guia-paulo-rogerio-pocos-de-caldas-turistas.jpg"
-                class="img-fluid rounded shadow-sm w-100"
-                alt="Guia Paulo Rogério com turistas em Poços de Caldas"
-                loading="lazy"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CLIMA + CONTATO -->
-    <section id="contato" class="py-5 bg-white">
-      <div class="container">
-        <div class="row g-4">
-          <div class="col-lg-5">
-            <h2 class="section-title mb-3">Contato e reservas</h2>
-            <p class="text-muted">
-              Entre em contato para montar o roteiro do seu grupo em Poços de Caldas. Atendemos agências de viagem,
-              igrejas, excursões escolares, grupos da melhor idade e famílias.
-            </p>
-
-            <ul class="list-unstyled mb-3 text-muted">
-              <li>📍 Poços de Caldas – Minas Gerais</li>
-              <li>
-                📞 WhatsApp:
-                <a href="https://wa.me/5535988951441" class="text-reset text-decoration-none">
-                  +55 (35) 98895-1441
-                </a>
-              </li>
-              <li>📧 E-mail: atendimento@agenciapaulorogeriotur.com.br</li>
-            </ul>
-
-            <a
-              href="https://wa.me/5535988951441?text=Olá%20Paulo%20Rogério,%20quero%20informações%20sobre%20passeios%20em%20Poços%20de%20Caldas."
-              class="btn btn-whats mb-3"
-              target="_blank"
-              rel="noopener"
-            >
-              Falar agora pelo WhatsApp
-            </a>
-
-            <p class="small text-muted mb-0">
-              Informe a data da excursão, número de pessoas e se já possui hospedagem. Retornaremos com as opções de
-              roteiro e valores.
-            </p>
-          </div>
-
-          <div class="col-lg-3">
-            <h5 class="mb-3">Clima em Poços de Caldas</h5>
-            <div class="weather-card" id="weather-card">
-              <p class="mb-1 fw-semibold">Poços de Caldas – MG</p>
-              <p class="mb-2 text-muted small">Condição aproximada para hoje.</p>
-              <div id="weather-loading" class="text-muted small">Carregando clima...</div>
-              <div id="weather-content" class="d-none">
-                <div class="d-flex align-items-baseline gap-2">
-                  <span class="weather-temp" id="weather-temp"></span>
-                  <span id="weather-desc" class="text-capitalize"></span>
-                </div>
-                <small class="text-muted" id="weather-extra"></small>
-              </div>
-              <small class="d-block mt-2 text-muted">Fonte: open-meteo.com</small>
-            </div>
-          </div>
-
-          <div class="col-lg-4">
-            <h5 class="mb-3">Localização aproximada</h5>
-            <div class="ratio ratio-4x3 rounded shadow-sm overflow-hidden">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.139404698693!2d-46.5676847!3d-21.7873936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cb1277a6e9ad23%3A0x9d50f9c1921a3f8d!2sPo%C3%A7os%20de%20Caldas%20-%20MG!5e0!3m2!1spt-BR!2sbr!4v1700000000000"
-                style="border: 0"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- RODAPÉ -->
-    <footer>
-      <div class="container">
-        <div class="row gy-3 align-items-center">
-          <div class="col-md-6">
-            <p class="mb-0">
-              &copy;
-              <span id="year"></span>
-              Agência Paulo Rogério Tur – Poços de Caldas / MG. Todos os direitos reservados.
-            </p>
-          </div>
-          <div class="col-md-6 text-md-end">
-            <a href="#pontos-turisticos">Pontos turísticos</a>
-            <span class="mx-2">•</span>
-            <a href="#contato">Fale conosco</a>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <!-- Banner de Cookies -->
-    <div id="cookie-banner" class="cookie-banner" style="display: none">
-      <div class="d-flex align-items-start gap-2">
-        <span class="tilapia">🐟</span>
-        <div>
-          <strong>Política de Cookies</strong><br />
-          <small>
-            Usamos cookies apenas para melhorar sua experiência de navegação e entender melhor o interesse pelos
-            roteiros de Poços de Caldas.
-          </small>
-        </div>
-      </div>
-      <div class="d-flex gap-2">
-        <button id="cookie-accept" class="btn btn-sm btn-success">Aceitar</button>
-        <button id="cookie-reject" class="btn btn-sm btn-outline-light">Recusar</button>
-      </div>
-    </div>
-
-    <!-- Scripts -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-
-    <script>
-      // Ano no rodapé
-      document.getElementById("year").textContent = new Date().getFullYear();
-
-      // Banner de cookies (Tilápia)
-      (function () {
-        const banner = document.getElementById("cookie-banner");
-        const accepted = localStorage.getItem("pr_tur_cookies");
-
-        if (!accepted) {
-          banner.style.display = "flex";
-        }
-
-        document.getElementById("cookie-accept").addEventListener("click", function () {
-          localStorage.setItem("pr_tur_cookies", "accepted");
-          banner.style.display = "none";
-        });
-
-        document.getElementById("cookie-reject").addEventListener("click", function () {
-          localStorage.setItem("pr_tur_cookies", "rejected");
-          banner.style.display = "none";
-        });
-      })();
-
-      // Clima simples para Poços de Caldas usando Open-Meteo (sem chave)
-      (function () {
-        const loading = document.getElementById("weather-loading");
-        const content = document.getElementById("weather-content");
-        const tempEl = document.getElementById("weather-temp");
-        const descEl = document.getElementById("weather-desc");
-        const extraEl = document.getElementById("weather-extra");
-
-        const url =
-          "https://api.open-meteo.com/v1/forecast?latitude=-21.79&longitude=-46.56&current_weather=true&daily=temperature_2m_max,temperature_2m_min&timezone=America%2FSao_Paulo";
-
-        fetch(url)
-          .then((res) => res.json())
-          .then((data) => {
-            if (!data.current_weather) throw new Error("Sem dados");
-
-            const temp = Math.round(data.current_weather.temperature);
-            const wind = Math.round(data.current_weather.windspeed);
-            const tmax = Math.round(data.daily.temperature_2m_max[0]);
-            const tmin = Math.round(data.daily.temperature_2m_min[0]);
-
-            tempEl.textContent = temp + "°C";
-            descEl.textContent = "Vento " + wind + " km/h";
-            extraEl.textContent = "Mín " + tmin + "°C • Máx " + tmax + "°C";
-
-            loading.classList.add("d-none");
-            content.classList.remove("d-none");
-          })
-          .catch(() => {
-            loading.textContent = "Não foi possível carregar o clima agora.";
-          });
-      })();
-    </script>
+    <!-- ENTRADA DO VITE / REACT -->
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
