@@ -1,0 +1,271 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f7f7f7;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* ===== CONTAINERS ===== */
+.prt-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.prt-container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ===== HEADER ===== */
+.prt-header {
+  background: #ffffff;
+  border-bottom: 1px solid #e2e2e2;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.prt-header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+}
+
+.prt-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.prt-logo img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.prt-logo-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.prt-logo-subtitle {
+  font-size: 0.85rem;
+  color: #444;
+}
+
+/* ===== NAV ===== */
+.prt-nav a {
+  margin-left: 20px;
+  font-weight: 500;
+  color: #004aad;
+  text-decoration: none;
+}
+
+.prt-nav a:hover {
+  text-decoration: underline;
+}
+
+/* ===== HERO ===== */
+.prt-hero {
+  background: linear-gradient(135deg, #007bff, #00a8d6);
+  padding: 50px 0;
+  color: #fff;
+}
+
+.prt-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.prt-hero-text h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.prt-hero-text span {
+  color: #ffe100;
+}
+
+.prt-hero-list {
+  margin: 15px 0;
+  list-style: none;
+}
+
+.prt-hero-list li {
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.prt-btn {
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.prt-btn-primary {
+  background: #25d366;
+  color: #fff;
+}
+
+.prt-btn-outline {
+  border: 2px solid #25d366;
+  color: #25d366;
+}
+
+.prt-hero-note {
+  margin-top: 12px;
+  font-size: 0.9rem;
+}
+
+/* ===== HERO IMAGE ===== */
+.prt-hero-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.prt-hero-image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.prt-hero-caption {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* ===== ROTEIROS ===== */
+.prt-section {
+  padding: 50px 0;
+}
+
+.prt-section-title {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  color: #003366;
+}
+
+.prt-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.prt-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.prt-card-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.prt-card-body {
+  padding: 16px;
+}
+
+.prt-card-duration {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #004aad;
+}
+
+/* ===== DESTAQUES ===== */
+.prt-highlights {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.prt-highlight-item {
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== CONTATO ===== */
+.prt-contact {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 20px;
+}
+
+.prt-contact-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+.prt-contact-extra {
+  margin-top: 15px;
+  font-size: 0.9rem;
+}
+
+/* ===== FOOTER ===== */
+.prt-footer {
+  background: #002040;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* ===== WHATSAPP FLOAT ===== */
+.prt-whatsapp-float {
+  position: fixed;
+  bottom: 18px;
+  right: 18px;
+  background: #25d366;
+  color: white;
+  width: 55px;
+  height: 55px;
+  font-size: 28px;
+  text-align: center;
+  line-height: 55px;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== COOKIE BANNER ===== */
+.prt-cookie-banner {
+  background: #222;
+  color: white;
+  padding: 15px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.prt-btn-cookie {
+  background: #00c853;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
