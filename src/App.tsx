@@ -35,7 +35,7 @@ const Header: React.FC = () => {
       <div className="prt-container prt-header-inner">
         <div className="prt-logo">
           <img
-            src="/imagens/guia-paulo-rogerio-pocos-de-caldas-turistas.jpg.jpg"
+            src="/imagens/guia-paulo-rogerio-pocos-de-caldas-turistas.jpg"
             alt="Guia Paulo Rogério com turistas no portal de Poços de Caldas"
           />
           <div className="prt-logo-text">
@@ -90,7 +90,7 @@ const Hero: React.FC = () => {
         <div className="prt-hero-side">
           <div className="prt-hero-card">
             <img
-              src="/imagens/capa-vista-area.jpg.jpg"
+              src="/imagens/capa-vista-area.jpg"
               alt="Vista aérea de Poços de Caldas"
               className="prt-hero-image"
             />
@@ -185,7 +185,7 @@ const ToursGrid: React.FC = () => {
         "Roteiro completo pelos principais pontos turísticos: teleférico, Cristo, Centro, Recanto Japonês e muito mais.",
       // Paulo Rogério com a família no relógio floral
       image:
-        "/imagens/familia-com-guia-paulo-rogerio-no-relogio-floral.jpg.jpg",
+        "/imagens/familia-com-guia-paulo-rogerio-no-relogio-floral.jpg",
       duration: "Duração média: 4 a 5 horas",
     },
     {
@@ -194,7 +194,7 @@ const ToursGrid: React.FC = () => {
         "Vista panorâmica da cidade em diferentes mirantes, com paradas para fotos e contemplação.",
       // Cristo com vista aérea
       image:
-        "/imagens/cristo-redentor-pocos-de-caldas-vista-aerea.jpg.jpg",
+        "/imagens/cristo-redentor-pocos-de-caldas-vista-aerea.jpg",
       duration: "Duração média: 3 horas",
     },
     {
@@ -202,7 +202,7 @@ const ToursGrid: React.FC = () => {
       description:
         "Roteiros adaptados, com paradas estratégicas, conforto e acompanhamento especial.",
       // Fonte dos Amores
-      image: "/imagens/fonte-dos-amores-pocos-de-caldas-1.jpg.jpg",
+      image: "/imagens/fonte-dos-amores-pocos-de-caldas-1.jpg",
       duration: "Roteiro personalizado conforme o grupo",
     },
   ];
