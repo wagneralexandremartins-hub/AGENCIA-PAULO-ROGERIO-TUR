@@ -1,579 +1,877 @@
 <!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Agência Paulo Rogério Tur – Excursões em Poços de Caldas</title>
+    <title>Agência Paulo Rogério Tur – Excursões e Turismo em Poços de Caldas</title>
 
-  <!-- SEO básico -->
-  <meta name="description"
-        content="Agência Paulo Rogério Tur – Excursões, city tour e roteiros completos em Poços de Caldas, com guia de turismo credenciado, conforto e segurança para grupos e famílias." />
-  <meta name="keywords"
-        content="turismo poços de caldas, excursão poços de caldas, city tour poços, guia de turismo, paulo rogerio tur" />
-  <meta name="author" content="Agência Paulo Rogério Tur" />
-  <link rel="canonical" href="https://agenciapaulorogeriotur.com.br/" />
+    <!-- SEO básico -->
+    <meta
+      name="description"
+      content="Agência Paulo Rogério Tur – Passeios guiados, city tour, excursões para grupos, melhor idade e associações em Poços de Caldas – MG e região. Guia credenciado e roteiros personalizados."
+    />
+    <meta
+      name="keywords"
+      content="turismo poços de caldas, excursões poços de caldas, agência de turismo poços de caldas, paulo rogerio tur, passeios guiados, city tour, melhor idade, excursões terceira idade"
+    />
+    <meta name="author" content="Agência Paulo Rogério Tur" />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://agenciapaulorogeriotur.com.br/" />
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-    :root {
-      --azul-escuro: #004a8d;
-      --azul-claro: #0e9ce8;
-      --cinza-fundo: #f5f5f5;
-      --cinza-borda: #e0e0e0;
-      --texto: #222;
-    }
+      :root {
+        --azul-escuro: #004a8d;
+        --azul-claro: #0e9ce8;
+        --roxo-natal: #6a1b9a;
+        --amarelo: #ffc107;
+        --verde: #00a859;
+        --cinza-fundo: #f5f5f5;
+        --cinza-borda: #e0e0e0;
+        --texto: #222;
+        --branco: #ffffff;
+      }
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--cinza-fundo);
-      color: var(--texto);
-      line-height: 1.5;
-    }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: var(--cinza-fundo);
+        color: var(--texto);
+        line-height: 1.5;
+      }
 
-    img {
-      max-width: 100%;
-      display: block;
-    }
+      img {
+        max-width: 100%;
+        display: block;
+      }
 
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
 
-    header {
-      background: var(--azul-escuro);
-      color: #fff;
-      padding: 24px 0 28px;
-      text-align: center;
-    }
+      /* HEADER / HERO */
 
-    header h1 {
-      font-size: 1.9rem;
-      margin-bottom: 8px;
-    }
+      header {
+        background: linear-gradient(135deg, var(--azul-escuro), #005fa8);
+        color: var(--branco);
+        padding: 24px 16px 32px;
+        text-align: center;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+        position: sticky;
+        top: 0;
+        z-index: 20;
+      }
 
-    header p {
-      font-size: 0.95rem;
-      opacity: 0.95;
-    }
-
-    .botoes-hero {
-      margin-top: 16px;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .botao-acao {
-      border-radius: 999px;
-      border: 1px solid #fff;
-      background: #ffb400;
-      color: #000;
-      padding: 7px 16px;
-      font-size: 0.9rem;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      cursor: pointer;
-      transition: background 0.2s ease, color 0.2s ease, transform 0.1s ease;
-    }
-
-    .botao-acao:hover {
-      background: #fff;
-      color: var(--azul-escuro);
-      transform: translateY(-1px);
-    }
-
-    main {
-      background: #fff;
-    }
-
-    /* Roteiros */
-    #roteiros {
-      padding: 32px 0 36px;
-    }
-
-    #roteiros h2 {
-      text-align: center;
-      font-size: 1.6rem;
-      color: var(--azul-escuro);
-      margin-bottom: 20px;
-    }
-
-    .roteiros-intro {
-      text-align: center;
-      font-size: 0.95rem;
-      color: #555;
-      margin-bottom: 22px;
-    }
-
-    .roteiros-lista {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 14px;
-    }
-
-    .roteiro-card {
-      background: var(--cinza-fundo);
-      border-radius: 10px;
-      padding: 14px 14px 16px;
-      border-left: 4px solid var(--azul-escuro);
-      border-top: 1px solid var(--cinza-borda);
-      font-size: 0.93rem;
-    }
-
-    .roteiro-card strong {
-      display: block;
-      margin-bottom: 4px;
-      color: var(--azul-escuro);
-    }
-
-    /* Galeria */
-    .galeria-section {
-      padding: 38px 0 40px;
-      background: #ffffff;
-    }
-
-    .galeria-titulo {
-      font-size: 2rem;
-      text-align: center;
-      color: var(--azul-escuro);
-      margin-bottom: 8px;
-    }
-
-    .galeria-subtitulo {
-      text-align: center;
-      font-size: 0.95rem;
-      color: #555;
-      margin-bottom: 26px;
-    }
-
-    .galeria-bloco {
-      margin-bottom: 30px;
-    }
-
-    .galeria-ponto {
-      font-size: 1.1rem;
-      margin-bottom: 10px;
-      color: #333;
-      border-left: 4px solid var(--azul-escuro);
-      padding-left: 8px;
-    }
-
-    .galeria-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 10px;
-    }
-
-    .galeria-item {
-      overflow: hidden;
-      border-radius: 8px;
-      background: #f0f0f0;
-    }
-
-    .galeria-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.3s ease;
-    }
-
-    .galeria-item img:hover {
-      transform: scale(1.05);
-    }
-
-    /* Clima e mapa */
-    #clima, #mapa {
-      padding: 32px 0;
-      border-top: 1px solid var(--cinza-borda);
-      background: #ffffff;
-    }
-
-    #clima h2, #mapa h2 {
-      text-align: center;
-      font-size: 1.4rem;
-      color: var(--azul-escuro);
-      margin-bottom: 14px;
-    }
-
-    #clima p, #mapa p {
-      text-align: center;
-      font-size: 0.95rem;
-      color: #444;
-      margin-bottom: 14px;
-    }
-
-    .iframe-wrapper {
-      max-width: 900px;
-      margin: 0 auto;
-      border-radius: 10px;
-      overflow: hidden;
-      border: 1px solid var(--cinza-borda);
-    }
-
-    .iframe-wrapper iframe {
-      width: 100%;
-      border: 0;
-      display: block;
-    }
-
-    /* Guias parceiros */
-    .guias-parceiros {
-      background: #fafafa;
-      padding: 38px 0 40px;
-    }
-
-    .guias-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-      margin-top: 10px;
-    }
-
-    .guia-card {
-      background: #ffffff;
-      border-radius: 12px;
-      padding: 16px;
-      display: grid;
-      grid-template-columns: minmax(0, 280px) minmax(0, 1fr);
-      gap: 18px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-      border: 1px solid var(--cinza-borda);
-    }
-
-    .guia-imagem-principal img {
-      width: 100%;
-      height: 100%;
-      border-radius: 10px;
-      object-fit: cover;
-    }
-
-    .guia-conteudo {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      font-size: 0.94rem;
-    }
-
-    .guia-nome {
-      font-size: 1.25rem;
-      color: var(--azul-escuro);
-      margin: 0;
-    }
-
-    .guia-origem {
-      font-size: 0.9rem;
-      color: #666;
-      margin: 0 0 4px;
-    }
-
-    .guia-descricao {
-      color: #444;
-    }
-
-    .guia-mini-galeria {
-      margin-top: 6px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
-      gap: 6px;
-    }
-
-    .guia-mini-galeria img {
-      width: 100%;
-      height: 80px;
-      border-radius: 6px;
-      object-fit: cover;
-    }
-
-    /* Contato e rodapé */
-    #contato {
-      padding: 28px 0 34px;
-      background: #ffffff;
-      border-top: 1px solid var(--cinza-borda);
-    }
-
-    #contato h2 {
-      text-align: center;
-      font-size: 1.4rem;
-      color: var(--azul-escuro);
-      margin-bottom: 10px;
-    }
-
-    #contato p {
-      text-align: center;
-      font-size: 0.95rem;
-      color: #444;
-      margin-bottom: 6px;
-    }
-
-    #contato a {
-      color: var(--azul-escuro);
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    #contato a:hover {
-      text-decoration: underline;
-    }
-
-    footer {
-      background: var(--azul-escuro);
-      color: #fff;
-      text-align: center;
-      padding: 16px 10px 18px;
-      font-size: 0.85rem;
-    }
-
-    @media (max-width: 768px) {
       header h1 {
+        font-size: 1.9rem;
+        margin-bottom: 6px;
+      }
+
+      header p {
+        font-size: 0.95rem;
+        opacity: 0.9;
+      }
+
+      .top-buttons {
+        margin-top: 18px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: center;
+      }
+
+      .btn-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.7);
+        padding: 8px 14px;
+        font-size: 0.9rem;
+        cursor: pointer;
+        transition: background 0.2s, transform 0.1s;
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      .btn-pill span.emoji {
+        font-size: 1.1rem;
+      }
+
+      .btn-pill:hover {
+        background: rgba(255, 255, 255, 0.16);
+        transform: translateY(-1px);
+      }
+
+      /* LAYOUT GERAL */
+
+      .section {
+        padding: 32px 16px;
+        max-width: 1120px;
+        margin: 0 auto;
+      }
+
+      .section h2 {
         font-size: 1.6rem;
+        margin-bottom: 8px;
+        color: var(--azul-escuro);
+      }
+
+      .section p.sub {
+        font-size: 0.95rem;
+        color: #555;
+        margin-bottom: 20px;
+      }
+
+      .divider-title {
+        border-left: 4px solid var(--azul-claro);
+        padding-left: 8px;
+        margin-bottom: 16px;
+        font-size: 1.25rem;
+        color: var(--azul-escuro);
+      }
+
+      /* ROTEIROS */
+
+      .cards-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .card {
+        background: var(--branco);
+        border-radius: 10px;
+        border: 1px solid var(--cinza-borda);
+        padding: 16px;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+      }
+
+      .card h3 {
+        font-size: 1.05rem;
+        margin-bottom: 8px;
+        color: var(--azul-escuro);
+      }
+
+      .card p {
+        font-size: 0.9rem;
+        color: #444;
+      }
+
+      /* GALERIA */
+
+      .galeria-bloco {
+        margin-bottom: 30px;
+      }
+
+      .galeria-bloco h3 {
+        font-size: 1.15rem;
+        color: var(--azul-escuro);
+        margin-bottom: 8px;
+      }
+
+      .galeria-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .galeria-item {
+        background: var(--branco);
+        border-radius: 10px;
+        overflow: hidden;
+        border: 1px solid var(--cinza-borda);
+        min-height: 140px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .galeria-item img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+      }
+
+      .galeria-caption {
+        font-size: 0.8rem;
+        padding: 8px;
+        color: #444;
+      }
+
+      /* CLIMA */
+
+      .clima-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        align-items: center;
+      }
+
+      .clima-card {
+        background: var(--branco);
+        border-radius: 12px;
+        border: 1px solid var(--cinza-borda);
+        padding: 16px 18px;
+        min-width: 260px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .clima-temp {
+        font-size: 2rem;
+        font-weight: bold;
+        color: var(--azul-escuro);
+      }
+
+      .clima-status {
+        font-size: 0.95rem;
+        color: #555;
+      }
+
+      .clima-extra {
+        font-size: 0.85rem;
+        color: #666;
+      }
+
+      /* MAPA */
+
+      .mapa-container {
+        background: var(--branco);
+        border-radius: 12px;
+        border: 1px solid var(--cinza-borda);
+        overflow: hidden;
+      }
+
+      .mapa-container iframe {
+        width: 100%;
+        height: 360px;
+        border: 0;
+      }
+
+      .mapa-info {
+        padding: 10px 14px 12px;
+        font-size: 0.9rem;
+      }
+
+      /* GUIAS PARCEIROS */
+
+      .guias-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
       }
 
       .guia-card {
-        grid-template-columns: 1fr;
+        background: var(--branco);
+        border-radius: 12px;
+        border: 1px solid var(--cinza-borda);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
       }
 
-      .guia-mini-galeria img {
-        height: 72px;
+      .guia-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
       }
-    }
-  </style>
-</head>
 
-<body>
-  <header>
-    <div class="container">
+      .guia-body {
+        padding: 10px 14px 14px;
+        font-size: 0.9rem;
+      }
+
+      .guia-body h3 {
+        font-size: 1.05rem;
+        margin-bottom: 4px;
+        color: var(--azul-escuro);
+      }
+
+      .badge-parceria {
+        display: inline-block;
+        border-radius: 999px;
+        padding: 2px 10px;
+        background: #fff7e0;
+        font-size: 0.75rem;
+        color: #8a5a00;
+        border: 1px solid #ffd26a;
+        margin-bottom: 6px;
+      }
+
+      /* RODAPÉ */
+
+      footer {
+        background: #02213b;
+        color: #ddd;
+        padding: 18px 16px;
+        font-size: 0.8rem;
+        margin-top: 26px;
+      }
+
+      footer .footer-inner {
+        max-width: 1120px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 10px;
+        align-items: center;
+      }
+
+      footer a {
+        color: #fff;
+        text-decoration: underline;
+      }
+
+      /* RESPONSIVO */
+
+      @media (max-width: 960px) {
+        .cards-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .galeria-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .guias-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 600px) {
+        header h1 {
+          font-size: 1.6rem;
+        }
+
+        .cards-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .galeria-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
       <h1>Agência Paulo Rogério Tur</h1>
-      <p>Excursões, roteiros turísticos e city tour em Poços de Caldas – MG</p>
+      <p>
+        Excursões, roteiros turísticos e city tour em Poços de Caldas – MG, com
+        guia credenciado.
+      </p>
 
-      <div class="botoes-hero">
-        <a href="#roteiros" class="botao-acao">📋 Ver roteiros</a>
-        <a href="#galeria" class="botao-acao">📸 Galeria de fotos</a>
-        <a href="#clima" class="botao-acao">🌤 Clima hoje</a>
-        <a href="#mapa" class="botao-acao">📍 Localização</a>
-        <a href="#guias-parceiros" class="botao-acao">🤝 Guias parceiros</a>
+      <div class="top-buttons">
+        <a href="#roteiros" class="btn-pill">
+          <span class="emoji">🚌</span>
+          <span>Ver roteiros</span>
+        </a>
+        <a href="#galeria" class="btn-pill">
+          <span class="emoji">📸</span>
+          <span>Galeria de fotos</span>
+        </a>
+        <a href="#clima" class="btn-pill">
+          <span class="emoji">☀️</span>
+          <span>Clima hoje</span>
+        </a>
+        <a href="#localizacao" class="btn-pill">
+          <span class="emoji">📍</span>
+          <span>Localização</span>
+        </a>
+        <a href="#guias" class="btn-pill">
+          <span class="emoji">🤝</span>
+          <span>Guias parceiros</span>
+        </a>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <main>
-    <!-- ROTEIROS -->
-    <section id="roteiros">
-      <div class="container">
-        <h2>Roteiros e Passeios</h2>
-        <p class="roteiros-intro">
-          Roteiros personalizados para grupos, famílias, melhor idade, igrejas, associações e excursões de todo o Brasil.
+    <!-- ROTEIROS E PASSEIOS -->
+    <section class="section" id="roteiros">
+      <h2>Roteiros e Passeios</h2>
+      <p class="sub">
+        Roteiros personalizados para grupos, famílias, melhor idade, igrejas,
+        associações e excursões de todo o Brasil.
+      </p>
+
+      <div class="cards-grid">
+        <div class="card">
+          <h3>City Tour completo</h3>
+          <p>
+            Cristo Redentor, Teleférico, Mirante, Fonte dos Amores, Recanto
+            Japonês e principais cartões-postais da cidade.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Excursões de um dia</h3>
+          <p>
+            Roteiro planejado para grupos com chegada pela manhã e retorno no
+            fim da tarde, com paradas estratégicas.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Grupos da melhor idade</h3>
+          <p>
+            Passeios com ritmo confortável, pontos de apoio e acompanhamento de
+            guia credenciado durante todo o percurso.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Roteiros sob medida</h3>
+          <p>
+            Montamos o passeio de acordo com o perfil do seu grupo, incluindo
+            hospedagem, restaurantes e atrações opcionais.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERIA PRINCIPAL -->
+    <section class="section" id="galeria">
+      <div class="divider-title">Galeria de Imagens</div>
+      <p class="sub">
+        Alguns registros dos pontos turísticos de Poços de Caldas que fazem
+        parte dos roteiros da Agência Paulo Rogério Tur.
+      </p>
+
+      <!-- TELEFÉRICO E VISTA -->
+      <div class="galeria-bloco">
+        <h3>Teleférico &amp; Vista da Cidade</h3>
+        <div class="galeria-grid">
+          <div class="galeria-item">
+            <img
+              src="imagens/estacao-teleferico-pocos-de-caldas.jpg"
+              alt="Estação do teleférico em Poços de Caldas"
+            />
+            <div class="galeria-caption">
+              Estação do teleférico – cartão-postal com vista para a cidade.
+            </div>
+          </div>
+          <div class="galeria-item">
+            <img
+              src="imagens/capa-vista-area.jpg"
+              alt="Vista aérea de Poços de Caldas"
+            />
+            <div class="galeria-caption">
+              Vista panorâmica de Poços de Caldas a partir dos mirantes.
+            </div>
+          </div>
+          <div class="galeria-item">
+            <img
+              src="imagens/cristo-redentor-pocos-de-caldas-vista-aerea.jpg"
+              alt="Cristo Redentor com vista aérea"
+            />
+            <div class="galeria-caption">
+              Vista aérea da região do Cristo Redentor e Parque do Cristo.
+            </div>
+          </div>
+          <div class="galeria-item">
+            <img
+              src="imagens/familia-com-guia-paulo-rogerio-no-relogio-floral.jpg"
+              alt="Família em passeio guiado com Paulo Rogério no relógio floral"
+            />
+            <div class="galeria-caption">
+              Família em passeio guiado com Paulo Rogério no relógio floral.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CRISTO E PARQUE DO CRISTO -->
+      <div class="galeria-bloco">
+        <h3>Cristo Redentor &amp; Parque do Cristo</h3>
+        <div class="galeria-grid">
+          <div class="galeria-item">
+            <img
+              src="imagens/cristo-redentor-pocos-de-caldas.jpg"
+              alt="Cristo Redentor em Poços de Caldas"
+            />
+            <div class="galeria-caption">
+              Cristo Redentor – um dos pontos mais visitados da cidade.
+            </div>
+          </div>
+          <div class="galeria-item">
+            <img
+              src="imagens/parque-do-cristo-mirante-pocos-de-caldas.jpg"
+              alt="Mirante do Parque do Cristo"
+            />
+            <div class="galeria-caption">
+              Mirante do Parque do Cristo com vista para o vale.
+            </div>
+          </div>
+          <div class="galeria-item">
+            <img
+              src="imagens/igreja-nossa-senhora-de-fatima-pocos-de-caldas.jpg"
+              alt="Igreja Nossa Senhora de Fátima"
+            />
+            <div class="galeria-caption">
+              Igreja Nossa Senhora de Fátima – parada de fé e contemplação.
+            </div>
+          </div>
+          <div class="galeria-item">
+            <img
+              src="imagens/guia-com-as-autoridades-da-cidade.jpg"
+              alt="Guia Paulo Rogério com autoridades da cidade"
+            />
+            <div class="galeria-caption">
+              Guia Paulo Rogério em eventos oficiais de turismo na cidade.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FONTE DOS AMORES E ÁGUAS TERMAIS -->
+      <div class="galeria-bloco">
+        <h3>Fonte dos Amores &amp; Águas termais</h3>
+        <div class="galeria-grid">
+          <div class="galeria-item">
+            <img
+              src="imagens/fonte-dos-amores-pocos-de-caldas-1.jpg"
+              alt="Fonte dos Amores em Poços de Caldas"
+            />
+            <div class="galeria-caption">
+              Fonte dos Amores – um dos cenários mais românticos da cidade.
+            </div>
+          </div>
+          <div class="galeria-item">
+            <img
+              src="imagens/aguas-termais-pocos-de-caldas.jpg"
+              alt="Águas termais em Poços de Caldas"
+            />
+            <div class="galeria-caption">
+              Estrutura de águas termais – ideal para relaxamento.
+            </div>
+          </div>
+          <div class="galeria-item">
+            <img
+              src="imagens/fonte-dos-macacos-aguas-sulfurosas.jpg"
+              alt="Fonte dos Macacos em Poços de Caldas"
+            />
+            <div class="galeria-caption">
+              Fonte dos Macacos – águas sulfurosas famosas na região.
+            </div>
+          </div>
+          <div class="galeria-item">
+            <img
+              src="imagens/familia-com-guia-paulo-rogerio-no-relogio-floral.jpg"
+              alt="Relógio floral em Poços de Caldas"
+            />
+            <div class="galeria-caption">
+              Relógio floral – parada obrigatória para fotos em grupo.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRAÇA DOS MACACOS & CENTRO -->
+      <div class="galeria-bloco">
+        <h3>Praça dos Macacos &amp; Centro</h3>
+        <div class="galeria-grid">
+          <div class="galeria-item">
+            <img
+              src="imagens/ponte-na-praca-dos-macacos.jpg"
+              alt="Ponte na Praça dos Macacos"
+            />
+            <div class="galeria-caption">
+              Ponte na Praça dos Macacos – região central de Poços de Caldas.
+            </div>
+          </div>
+          <div class="galeria-item">
+            <img
+              src="imagens/pedra-balao-pocos-de-caldas-1.jpg"
+              alt="Pedra Balão em Poços de Caldas"
+            />
+            <div class="galeria-caption">
+              Pedra Balão – formação rochosa tradicional nos roteiros.
+            </div>
+          </div>
+          <div class="galeria-item">
+            <img
+              src="imagens/pedra-balao-pocos-de-caldas-2.jpg"
+              alt="Vista da Pedra Balão"
+            />
+            <div class="galeria-caption">
+              Outra perspectiva da Pedra Balão com vista para o vale.
+            </div>
+          </div>
+          <div class="galeria-item">
+            <img
+              src="imagens/lago-country-club-pocos-de-caldas.jpg"
+              alt="Lago do Country Club em Poços de Caldas"
+            />
+            <div class="galeria-caption">
+              Lago no Country Club – cenário tranquilo para passeios.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RECANTO JAPONÊS -->
+      <div class="galeria-bloco">
+        <h3>Recanto Japonês</h3>
+        <div class="galeria-grid">
+          <div class="galeria-item">
+            <img
+              src="imagens/recanto-japones-pocos-de-caldas-entrada.jpg"
+              alt="Entrada do Recanto Japonês em Poços de Caldas"
+            />
+            <div class="galeria-caption">
+              Entrada do Recanto Japonês – natureza e tranquilidade.
+            </div>
+          </div>
+          <div class="galeria-item">
+            <img
+              src="imagens/recanto-japones-pocos-de-caldas-casa-1.jpg"
+              alt="Casa de chá no Recanto Japonês"
+            />
+            <div class="galeria-caption">
+              Casa com arquitetura inspirada na cultura japonesa.
+            </div>
+          </div>
+          <div class="galeria-item">
+            <img
+              src="imagens/recanto-japones-pocos-de-caldas-jardim-1.jpg"
+              alt="Jardim japonês em Poços de Caldas"
+            />
+            <div class="galeria-caption">
+              Jardim japonês com lagos, pontes e vegetação típica.
+            </div>
+          </div>
+          <div class="galeria-item">
+            <img
+              src="imagens/ponte-das-carpas-pocos-de-caldas.jpg"
+              alt="Ponte das carpas no Recanto Japonês em Poços de Caldas"
+            />
+            <div class="galeria-caption">
+              Ponte sobre o lago das carpas no Recanto Japonês.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CASCATAS & ÁGUAS -->
+      <div class="galeria-bloco">
+        <h3>Cascatas &amp; Águas termais</h3>
+        <div class="galeria-grid">
+          <div class="galeria-item">
+            <img
+              src="imagens/cascata-veu-das-noivas-com-turistas.jpg"
+              alt="Cascata Véu das Noivas com turistas em Poços de Caldas"
+            />
+            <div class="galeria-caption">
+              Grupo em passeio na Cascata Véu das Noivas.
+            </div>
+          </div>
+          <div class="galeria-item">
+            <img
+              src="imagens/cascata-das-antas-pocos-de-caldas.jpg"
+              alt="Cascata das Antas em Poços de Caldas"
+            />
+            <div class="galeria-caption">
+              Cascata das Antas – parada especial para fotos e contemplação.
+            </div>
+          </div>
+          <div class="galeria-item">
+            <img
+              src="imagens/aguas-termais-pocos-de-caldas.jpg"
+              alt="Estrutura de águas termais em Poços de Caldas"
+            />
+            <div class="galeria-caption">
+              Estrutura de águas termais – opção de roteiro para relaxar.
+            </div>
+          </div>
+          <div class="galeria-item">
+            <img
+              src="imagens/aguas-termais-pocos-de-caldas.jpg"
+              alt="Piscina de águas termais em Poços de Caldas"
+            />
+            <div class="galeria-caption">
+              Piscina aquecida – complemento perfeito para excursões.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLIMA -->
+    <section class="section" id="clima">
+      <div class="divider-title">Clima em Poços de Caldas – Hoje</div>
+
+      <div class="clima-container">
+        <div class="clima-card" id="clima-card">
+          <div class="clima-temp" id="clima-temp">--°C</div>
+          <div class="clima-status" id="clima-status">
+            Carregando condições do tempo...
+          </div>
+          <div class="clima-extra" id="clima-extra"></div>
+        </div>
+
+        <p class="sub" style="max-width: 480px">
+          As condições do tempo são importantes para planejar a subida ao
+          Cristo, visitas a mirantes, cascatas e caminhadas. Os horários dos
+          roteiros podem ser ajustados de acordo com o clima do dia.
         </p>
-
-        <div class="roteiros-lista">
-          <article class="roteiro-card">
-            <strong>City Tour completo</strong>
-            Cristo Redentor, Teleférico, Mirante, Fonte dos Amores, Recanto Japonês e principais cartões-postais da cidade.
-          </article>
-
-          <article class="roteiro-card">
-            <strong>Excursões de um dia</strong>
-            Roteiro planejado para grupos com chegada pela manhã e retorno no fim da tarde, com paradas estratégicas.
-          </article>
-
-          <article class="roteiro-card">
-            <strong>Grupos da melhor idade</strong>
-            Passeios com ritmo confortável, pontos de apoio e acompanhamento de guia credenciado durante todo o percurso.
-          </article>
-
-          <article class="roteiro-card">
-            <strong>Roteiros sob medida</strong>
-            Montamos o passeio de acordo com o perfil do seu grupo, incluindo hospedagem, restaurantes e atrações opcionais.
-          </article>
-        </div>
       </div>
     </section>
 
-    <!-- GALERIA -->
-    <section id="galeria" class="galeria-section">
-      <div class="container">
-        <h2 class="galeria-titulo">Galeria de Imagens</h2>
-        <p class="galeria-subtitulo">
-          Alguns registros dos pontos turísticos de Poços de Caldas que fazem parte dos roteiros da Agência Paulo Rogério Tur.
-        </p>
+    <!-- LOCALIZAÇÃO / MAPA -->
+    <section class="section" id="localizacao">
+      <div class="divider-title">Localização e ponto de encontro</div>
+      <p class="sub">
+        Ponto de saída dos passeios em Poços de Caldas e região central.
+      </p>
 
-        <!-- Teleférico & vistas -->
-        <div class="galeria-bloco">
-          <h3 class="galeria-ponto">Teleférico &amp; Vista da Cidade</h3>
-          <div class="galeria-grid">
-            <figure class="galeria-item">
-              <img src="imagens/estacao-teleferico-pocos-de-caldas.jpg"
-                   alt="Estação do teleférico em Poços de Caldas com outdoor de divulgação">
-            </figure>
-            <figure class="galeria-item">
-              <img src="imagens/capa-vista-area.jpg"
-                   alt="Vista aérea da cidade de Poços de Caldas">
-            </figure>
-            <figure class="galeria-item">
-              <img src="imagens/pedra-balao-pocos-de-caldas-3.jpg"
-                   alt="Pedra do Balão em Poços de Caldas">
-            </figure>
-            <figure class="galeria-item">
-              <img src="imagens/familia-com-guia-paulo-rogerio-no-relogio-floral.jpg"
-                   alt="Família em passeio guiado com Paulo Rogério no relógio floral de Poços de Caldas">
-            </figure>
-          </div>
-        </div>
-
-        <!-- Cristo -->
-        <div class="galeria-bloco">
-          <h3 class="galeria-ponto">Cristo Redentor &amp; Parque do Cristo</h3>
-          <div class="galeria-grid">
-            <figure class="galeria-item">
-              <img src="imagens/cristo-redentor-pocos-de-caldas-vista-aerea.jpg"
-                   alt="Cristo Redentor de Poços de Caldas visto de cima">
-            </figure>
-            <figure class="galeria-item">
-              <img src="imagens/fonte-dos-amores-pocos-de-caldas-1.jpg"
-                   alt="Fonte dos Amores em Poços de Caldas">
-            </figure>
-          </div>
-        </div>
-
-        <!-- Recanto Japonês -->
-        <div class="galeria-bloco">
-          <h3 class="galeria-ponto">Recanto Japonês</h3>
-          <div class="galeria-grid">
-            <figure class="galeria-item">
-              <img src="imagens/recanto-japones-pocos-de-caldas-entrada.jpg"
-                   alt="Entrada do Recanto Japonês em Poços de Caldas">
-            </figure>
-            <figure class="galeria-item">
-              <img src="imagens/recanto-japones-pocos-de-caldas-jardim-1.jpg"
-                   alt="Jardim do Recanto Japonês em Poços de Caldas">
-            </figure>
-            <figure class="galeria-item">
-              <img src="imagens/recanto-japones-pocos-de-caldas-casa-1.jpg"
-                   alt="Casa de chá no Recanto Japonês em Poços de Caldas">
-            </figure>
-            <figure class="galeria-item">
-              <img src="imagens/recanto-japones-pocos-de-caldas-ponte-carpas.jpg"
-                   alt="Ponte das carpas no Recanto Japonês em Poços de Caldas">
-            </figure>
-          </div>
-        </div>
-
-        <!-- Cascatas & águas termais -->
-        <div class="galeria-bloco">
-          <h3 class="galeria-ponto">Cascatas &amp; Águas termais</h3>
-          <div class="galeria-grid">
-            <figure class="galeria-item">
-              <img src="imagens/cascata-veu-das-noivas-com-turistas.jpg"
-                   alt="Cascata Véu das Noivas com turistas em Poços de Caldas">
-            </figure>
-            <figure class="galeria-item">
-              <img src="imagens/cascata-das-antas-pocos-de-caldas.jpg"
-                   alt="Cascata das Antas em Poços de Caldas">
-            </figure>
-            <figure class="galeria-item">
-              <img src="imagens/aguas-termais-pocos-de-caldas.jpg"
-                   alt="Águas termais em Poços de Caldas">
-            </figure>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CLIMA (IFRAME SIMPLES) -->
-    <section id="clima">
-      <div class="container">
-        <h2>Clima em Poços de Caldas</h2>
-        <p>Veja a previsão do tempo atualizada para planejar melhor o seu passeio.</p>
-        <div class="iframe-wrapper">
-          <iframe
-            src="https://www.climatempo.com.br/previsao-do-tempo/cidade/544/pocosdecaldas-mg"
-            height="400"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-        </div>
-      </div>
-    </section>
-
-    <!-- MAPA (GOOGLE MAPS VIA IFRAME) -->
-    <section id="mapa">
-      <div class="container">
-        <h2>Localização da Agência</h2>
-        <p>Rua Guiseppe Maiochi, 217 – Poços de Caldas / MG – CEP 37704-316</p>
-        <div class="iframe-wrapper">
-          <iframe
-            src="https://www.google.com/maps?q=Rua+Guiseppe+Maiochi+217,+Po%C3%A7os+de+Caldas+-+MG&output=embed"
-            height="380"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
+      <div class="mapa-container">
+        <iframe
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=Po%C3%A7os%20de%20Caldas%20-%20MG&output=embed"
+          title="Mapa de Poços de Caldas"
+        ></iframe>
+        <div class="mapa-info">
+          <strong>Poços de Caldas – MG</strong><br />
+          Saídas combinadas conforme o roteiro e a hospedagem do grupo.<br />
+          Contato e reservas: <strong>(35) 9 9885-1441</strong> – Guia Paulo
+          Rogério.
         </div>
       </div>
     </section>
 
     <!-- GUIAS PARCEIROS -->
-    <section id="guias-parceiros" class="guias-parceiros">
-      <div class="container">
-        <h2 class="galeria-titulo">Guias Parceiros</h2>
-        <p class="galeria-subtitulo">
-          Parcerias que fortalecem o turismo e trazem grupos de várias regiões do Brasil para Poços de Caldas.
-        </p>
+    <section class="section" id="guias">
+      <div class="divider-title">Guias parceiros</div>
+      <p class="sub">
+        Além da atuação do guia Paulo Rogério, a agência conta com parcerias
+        para atender grupos de diferentes cidades e associações.
+      </p>
 
-        <div class="guias-grid">
-          <article class="guia-card">
-            <div class="guia-imagem-principal">
-              <img src="imagens/pinho-santos-casa-geraldo.jpg"
-                   alt="Grupo da AFEPESF de Santos-SP em visita à Casa Geraldo com Paulo Rogério e a guia Pinho">
-            </div>
+      <div class="guias-grid">
+        <!-- Paulo Rogério -->
+        <div class="guia-card">
+          <img
+            src="imagens/guia-paulo-rogerio-cristaleira.jpg"
+            alt="Guia de turismo Paulo Rogério em Poços de Caldas"
+          />
+          <div class="guia-body">
+            <span class="badge-parceria">Guia credenciado</span>
+            <h3>Guia Paulo Rogério – PRM Turismo</h3>
+            <p>
+              Especializado em grupos da melhor idade, igrejas, excursões de
+              associações e famílias. Atendimento humanizado e roteiros
+              adaptados ao ritmo do grupo.
+            </p>
+            <p style="margin-top: 6px">
+              <strong>Contato:</strong> (35) 9 9885-1441<br />
+              <strong>Cidade base:</strong> Poços de Caldas – MG
+            </p>
+          </div>
+        </div>
 
-            <div class="guia-conteudo">
-              <h3 class="guia-nome">Guia Pinho</h3>
-              <p class="guia-origem">AFEPESF – Santos / SP</p>
-              <p class="guia-descricao">
-                Excursão da AFEPESF de Santos-SP em parceria com a Agência Paulo Rogério Tur.
-                Roteiro com City Tour, Recanto Japonês, Casa Geraldo, Cristo Redentor e principais
-                atrativos de Poços de Caldas, com acompanhamento da guia Pinho e do guia Paulo Rogério.
-              </p>
-
-              <div class="guia-mini-galeria">
-                <img src="imagens/pinho-santos-recanto-japones-01.jpg"
-                     alt="Guia apresentando o Recanto Japonês ao grupo da AFEPESF de Santos-SP">
-                <img src="imagens/pinho-santos-recanto-japones-02.jpg"
-                     alt="Turistas da AFEPESF de Santos ouvindo explicação no Recanto Japonês">
-                <img src="imagens/pinho-santos-recanto-japones-03.jpg"
-                     alt="Grupo da AFEPESF de Santos na ponte do Recanto Japonês">
-                <img src="imagens/pinho-santos-recanto-japones-04.jpg"
-                     alt="Foto do grupo da AFEPESF de Santos no Recanto Japonês">
-              </div>
-            </div>
-          </article>
+        <!-- Guia Pinho / AFEPESP Santos -->
+        <div class="guia-card">
+          <img
+            src="imagens/pinho-santos-casa-geraldo.jpg"
+            alt="Grupo de Santos-SP com a guia Pinho e guia Paulo Rogério"
+          />
+          <div class="guia-body">
+            <span class="badge-parceria">Parceria em excursões</span>
+            <h3>Guia Pinho – AFEPESP Santos-SP</h3>
+            <p>
+              Parceria em excursões vindas do litoral paulista, com grupos da
+              AFEPESP Santos-SP e região. Trabalho conjunto com Paulo Rogério em
+              roteiros por Poços de Caldas, Recanto Japonês, cascatas e pontos
+              históricos.
+            </p>
+            <p style="margin-top: 6px">
+              Registros de grupos em pontos como Casa Geraldo, Recanto Japonês,
+              Cascata Véu das Noivas e Parque do Cristo, sempre com atendimento
+              próximo e acolhedor.
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- CONTATO -->
-    <section id="contato">
-      <div class="container">
-        <h2>Contato para Excursões</h2>
-        <p>Agência Paulo Rogério Tur – Poços de Caldas / MG</p>
-        <p>WhatsApp: <a href="https://wa.me/5535996851441" target="_blank" rel="noopener noreferrer">(35) 9 9685-1441</a></p>
-        <p>E-mail: <a href="mailto:contato@agenciapaulorogeriotur.com.br">contato@agenciapaulorogeriotur.com.br</a></p>
+    <footer>
+      <div class="footer-inner">
+        <div>
+          ©
+          <span id="ano-atual"></span>
+          Agência Paulo Rogério Tur – Poços de Caldas – MG. Todos os direitos
+          reservados.
+        </div>
+        <div>
+          Contato: <strong>(35) 9 9885-1441</strong> |
+          E-mail: agenciapaulorogeriotur@gmail.com
+        </div>
       </div>
-    </section>
-  </main>
+    </footer>
 
-  <footer>
-    © 2025 Agência Paulo Rogério Tur – Todos os direitos reservados.
-  </footer>
-</body>
+    <script>
+      // Ano no rodapé
+      document.getElementById("ano-atual").textContent =
+        new Date().getFullYear();
+
+      // CLIMA – usando Open-Meteo (sem chave, com CORS liberado)
+      (function carregarClima() {
+        const lat = -21.78;
+        const lon = -46.57;
+        const url =
+          "https://api.open-meteo.com/v1/forecast?latitude=" +
+          lat +
+          "&longitude=" +
+          lon +
+          "&current_weather=true&timezone=auto";
+
+        fetch(url)
+          .then(function (res) {
+            return res.json();
+          })
+          .then(function (data) {
+            if (!data || !data.current_weather) {
+              throw new Error("Sem dados de clima");
+            }
+
+            const temp = data.current_weather.temperature;
+            const wind = data.current_weather.windspeed;
+            const code = data.current_weather.weathercode;
+
+            // descrição simples
+            let cond = "Condição estável";
+            if (code === 0) cond = "Céu limpo";
+            else if ([1, 2, 3].includes(code)) cond = "Parcialmente nublado";
+            else if ([45, 48].includes(code))
+              cond = "Nevoeiro ou névoa úmida";
+            else if ([51, 53, 55, 61, 63, 65].includes(code))
+              cond = "Possibilidade de chuva";
+            else if ([71, 73, 75].includes(code)) cond = "Possibilidade de frio";
+            else if ([95, 96, 99].includes(code))
+              cond = "Tempo instável – atenção a chuvas fortes";
+
+            document.getElementById("clima-temp").textContent =
+              temp.toFixed(1) + "°C";
+            document.getElementById("clima-status").textContent =
+              cond + " em Poços de Caldas.";
+            document.getElementById("clima-extra").textContent =
+              "Vento aproximado de " +
+              wind.toFixed(1) +
+              " km/h. Atualizado pela API Open-Meteo.";
+          })
+          .catch(function () {
+            document.getElementById("clima-status").textContent =
+              "Não foi possível carregar o clima agora. Tente novamente em instantes.";
+            document.getElementById("clima-extra").textContent = "";
+          });
+      })();
+    </script>
+  </body>
 </html>
