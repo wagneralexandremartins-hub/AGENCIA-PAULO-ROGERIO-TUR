@@ -1,41 +1,69 @@
-<section class="hero-carrossel">
-  <div class="carrossel">
-    <div class="carrossel-slide active">
-      <img src="imagens/carrossel-pocos-1.jpg" alt="Vista aérea de Poços de Caldas - área central" />
-      <div class="carrossel-legenda">
-        <h2>Poços de Caldas – Vista Aérea</h2>
-      </div>
-    </div>
+<!-- aqui vem o restante do conteúdo da página -->
 
-    <div class="carrossel-slide">
-      <img src="imagens/carrossel-pocos-2.jpg" alt="Vista panorâmica de Poços de Caldas" />
-      <div class="carrossel-legenda">
-        <h2>Turismo em Poços de Caldas</h2>
-      </div>
-    </div>
+  <!-- script do carrossel -->
+  <script>
+    (function () {
+      const slides = document.querySelectorAll(".carrossel-slide");
+      const dots = document.querySelectorAll(".carrossel-dots .dot");
+      const prevBtn = document.querySelector(".carrossel-btn.prev");
+      const nextBtn = document.querySelector(".carrossel-btn.next");
 
-    <div class="carrossel-slide">
-      <img src="imagens/carrossel-pocos-3.jpg" alt="Portal de entrada de Poços de Caldas" />
-      <div class="carrossel-legenda">
-        <h2>Bem-vindo a Poços de Caldas</h2>
-      </div>
-    </div>
+      let currentIndex = 0;
+      let intervalId;
 
-    <div class="carrossel-slide">
-      <img src="imagens/carrossel-pocos-4.jpg" alt="Vista panorâmica da cidade e montanhas" />
-      <div class="carrossel-legenda">
-        <h2>Cidade, Montanhas e Natureza</h2>
-      </div>
-    </div>
+      function mostrarSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.classList.toggle("active", i === index);
+        });
+        dots.forEach((dot, i) => {
+          dot.classList.toggle("active", i === index);
+        });
+        currentIndex = index;
+      }
 
-    <button class="carrossel-btn prev">&#10094;</button>
-    <button class="carrossel-btn next">&#10095;</button>
+      function proximoSlide() {
+        const novoIndex = (currentIndex + 1) % slides.length;
+        mostrarSlide(novoIndex);
+      }
 
-    <div class="carrossel-dots">
-      <span class="dot active" data-index="0"></span>
-      <span class="dot" data-index="1"></span>
-      <span class="dot" data-index="2"></span>
-      <span class="dot" data-index="3"></span>
-    </div>
-  </div>
-</section>
+      function slideAnterior() {
+        const novoIndex =
+          (currentIndex - 1 + slides.length) % slides.length;
+        mostrarSlide(novoIndex);
+      }
+
+      function iniciarAutoPlay() {
+        pararAutoPlay();
+        intervalId = setInterval(proximoSlide, 6000);
+      }
+
+      function pararAutoPlay() {
+        if (intervalId) clearInterval(intervalId);
+      }
+
+      if (prevBtn && nextBtn) {
+        prevBtn.addEventListener("click", () => {
+          slideAnterior();
+          iniciarAutoPlay();
+        });
+
+        nextBtn.addEventListener("click", () => {
+          proximoSlide();
+          iniciarAutoPlay();
+        });
+      }
+
+      dots.forEach((dot) => {
+        dot.addEventListener("click", () => {
+          const index = Number(dot.getAttribute("data-index"));
+          mostrarSlide(index);
+          iniciarAutoPlay();
+        });
+      });
+
+      mostrarSlide(currentIndex);
+      iniciarAutoPlay();
+    })();
+  </script>
+</body>
+</html>
