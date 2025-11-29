@@ -1,69 +1,844 @@
-<!-- aqui vem o restante do conteúdo da página -->
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- script do carrossel -->
-  <script>
-    (function () {
-      const slides = document.querySelectorAll(".carrossel-slide");
-      const dots = document.querySelectorAll(".carrossel-dots .dot");
-      const prevBtn = document.querySelector(".carrossel-btn.prev");
-      const nextBtn = document.querySelector(".carrossel-btn.next");
+    <title>Agência Paulo Rogério Tur – Excursões e Turismo em Poços de Caldas</title>
 
-      let currentIndex = 0;
-      let intervalId;
+    <!-- SEO -->
+    <meta
+      name="description"
+      content="Agência Paulo Rogério Tur – Excursões, roteiros turísticos e city tour em Poços de Caldas – MG, com guia credenciado. Passeios para grupos, famílias, melhor idade, igrejas e associações."
+    />
+    <meta
+      name="keywords"
+      content="turismo poços de caldas, excursões poços de caldas, agência de turismo poços de caldas, paulo rogerio tur, passeios guiados, city tour poços de caldas, cristo redentor, recanto japonês, cascata véu das noivas"
+    />
+    <meta name="author" content="Agência Paulo Rogério Tur" />
 
-      function mostrarSlide(index) {
-        slides.forEach((slide, i) => {
-          slide.classList.toggle("active", i === index);
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: #f5f5f5;
+        color: #222;
+        line-height: 1.5;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      /* TOPO / HEADER */
+
+      header.topo {
+        background: #004b8d;
+        color: #fff;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .topo-conteudo {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 12px 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+
+      .logo-texto {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .logo-sigla {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: #ffcc33;
+        color: #004b8d;
+        font-weight: 700;
+        font-size: 1.1rem;
+      }
+
+      .logo-info h1 {
+        font-size: 1rem;
+        font-weight: 700;
+      }
+
+      .logo-info p {
+        font-size: 0.8rem;
+        opacity: 0.9;
+      }
+
+      nav.menu {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        font-size: 0.85rem;
+      }
+
+      nav.menu a {
+        padding: 6px 10px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.12);
+        transition: background 0.2s;
+        white-space: nowrap;
+      }
+
+      nav.menu a:hover {
+        background: rgba(255, 255, 255, 0.3);
+      }
+
+      .btn-whats-topo {
+        background: #25d366;
+        color: #fff;
+        padding: 6px 12px;
+        border-radius: 999px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        white-space: nowrap;
+      }
+
+      .btn-whats-topo span {
+        font-size: 1rem;
+      }
+
+      /* HERO – CARROSSEL */
+
+      .hero-carrossel {
+        width: 100%;
+        background: #000;
+        overflow: hidden;
+      }
+
+      .carrossel {
+        position: relative;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .carrossel-slide {
+        display: none;
+        height: 320px;
+        position: relative;
+      }
+
+      .carrossel-slide.active {
+        display: block;
+      }
+
+      .carrossel-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .carrossel-legenda {
+        position: absolute;
+        left: 20px;
+        bottom: 20px;
+        background: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        padding: 10px 18px;
+        border-radius: 10px;
+        max-width: 80%;
+      }
+
+      .carrossel-legenda h2 {
+        font-size: 1.1rem;
+        margin-bottom: 4px;
+      }
+
+      .carrossel-legenda p {
+        font-size: 0.9rem;
+        opacity: 0.96;
+      }
+
+      .carrossel-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        border: none;
+        background: rgba(0, 0, 0, 0.45);
+        color: #fff;
+        font-size: 24px;
+        padding: 8px 12px;
+        cursor: pointer;
+        border-radius: 50%;
+      }
+
+      .carrossel-btn:hover {
+        background: rgba(0, 0, 0, 0.75);
+      }
+
+      .carrossel-btn.prev {
+        left: 10px;
+      }
+
+      .carrossel-btn.next {
+        right: 10px;
+      }
+
+      .carrossel-dots {
+        text-align: center;
+        margin: 10px 0 14px;
+      }
+
+      .carrossel-dots .dot {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        margin: 0 4px;
+        border-radius: 50%;
+        background: #bbb;
+        cursor: pointer;
+      }
+
+      .carrossel-dots .dot.active {
+        background: #004b8d;
+      }
+
+      /* LAYOUT PRINCIPAL */
+
+      main {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 24px 16px 32px;
+      }
+
+      section {
+        margin-bottom: 32px;
+      }
+
+      h2.titulo-sessao {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+        color: #004b8d;
+      }
+
+      p.texto-sessao {
+        font-size: 0.95rem;
+        margin-bottom: 14px;
+      }
+
+      .cta-whats {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: #25d366;
+        color: #fff;
+        padding: 10px 18px;
+        border-radius: 999px;
+        font-weight: 600;
+        font-size: 0.95rem;
+        margin-top: 6px;
+      }
+
+      .cta-whats span {
+        font-size: 1.2rem;
+      }
+
+      /* ROTEIROS - CARDS */
+
+      .grade-roteiros {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-top: 12px;
+      }
+
+      .card-roteiro {
+        background: #fff;
+        border-radius: 10px;
+        padding: 14px 14px 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+      }
+
+      .card-roteiro h3 {
+        font-size: 1.05rem;
+        margin-bottom: 6px;
+        color: #333;
+      }
+
+      .card-roteiro p {
+        font-size: 0.9rem;
+      }
+
+      /* GALERIA */
+
+      .galeria-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-top: 12px;
+      }
+
+      .galeria-item {
+        background: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+      }
+
+      .galeria-item img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+      }
+
+      .galeria-item figcaption {
+        padding: 8px 10px;
+        font-size: 0.85rem;
+      }
+
+      /* CLIMA */
+
+      .bloco-clima {
+        background: #fff;
+        border-radius: 10px;
+        padding: 14px 16px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+      }
+
+      .bloco-clima .temp {
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin: 8px 0 0;
+      }
+
+      .bloco-clima small {
+        display: block;
+        margin: 6px 0 10px;
+        font-size: 0.8rem;
+        color: #555;
+      }
+
+      .bloco-clima a {
+        font-size: 0.85rem;
+        color: #004b8d;
+        text-decoration: underline;
+      }
+
+      /* LOCALIZAÇÃO */
+
+      .bloco-localizacao {
+        background: #fff;
+        border-radius: 10px;
+        padding: 14px 16px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+      }
+
+      .mapa-placeholder {
+        margin-top: 10px;
+        border-radius: 10px;
+        background: #e3e7ec;
+        padding: 20px;
+        font-size: 0.9rem;
+        color: #333;
+        text-align: center;
+      }
+
+      /* GUIAS */
+
+      .grade-guias {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-top: 12px;
+      }
+
+      .card-guia {
+        background: #fff;
+        border-radius: 10px;
+        padding: 14px 16px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+      }
+
+      .card-guia h3 {
+        font-size: 1.05rem;
+        margin-bottom: 4px;
+      }
+
+      .card-guia p {
+        font-size: 0.9rem;
+        margin-bottom: 4px;
+      }
+
+      /* CONTATOS */
+
+      .bloco-contatos {
+        background: #fff;
+        border-radius: 10px;
+        padding: 14px 16px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+        font-size: 0.9rem;
+      }
+
+      .bloco-contatos p {
+        margin-bottom: 4px;
+      }
+
+      .bloco-contatos strong {
+        color: #004b8d;
+      }
+
+      /* RODAPÉ */
+
+      footer {
+        background: #002b4f;
+        color: #fff;
+        padding: 14px 16px;
+        font-size: 0.8rem;
+        text-align: center;
+      }
+
+      footer p {
+        margin: 2px 0;
+      }
+
+      /* RESPONSIVO */
+
+      @media (min-width: 768px) {
+        .carrossel-slide {
+          height: 420px;
+        }
+
+        .carrossel-legenda h2 {
+          font-size: 1.4rem;
+        }
+
+        .carrossel-legenda p {
+          font-size: 1rem;
+        }
+
+        .grade-roteiros {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .galeria-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        .grade-guias {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 640px) {
+        .topo-conteudo {
+          flex-wrap: wrap;
+        }
+
+        nav.menu {
+          justify-content: flex-start;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="topo" id="topo">
+      <div class="topo-conteudo">
+        <div class="logo-texto">
+          <span class="logo-sigla">PR</span>
+          <div class="logo-info">
+            <h1>Agência Paulo Rogério Tur</h1>
+            <p>Excursões e turismo em Poços de Caldas – MG</p>
+          </div>
+        </div>
+
+        <nav class="menu">
+          <a href="#roteiros">Roteiros</a>
+          <a href="#galeria">Galeria</a>
+          <a href="#clima">☀️ Clima hoje</a>
+          <a href="#localizacao">Localização</a>
+          <a href="#guias">Guias parceiros</a>
+        </nav>
+
+        <a
+          class="btn-whats-topo"
+          href="https://wa.me/5535989851441"
+          target="_blank"
+          rel="noopener"
+        >
+          <span>🟢</span> WhatsApp
+        </a>
+      </div>
+    </header>
+
+    <!-- HERO: CARROSSEL COM AS 4 FOTOS DE POÇOS -->
+    <section class="hero-carrossel" aria-label="Vistas de Poços de Caldas">
+      <div class="carrossel">
+        <div class="carrossel-slide active">
+          <img
+            src="imagens/carrossel-pocos-1.jpg"
+            alt="Vista aérea da região central de Poços de Caldas"
+          />
+          <div class="carrossel-legenda">
+            <h2>Poços de Caldas vista do alto</h2>
+            <p>Vista aérea da área central e parques, ideal para city tour completo.</p>
+          </div>
+        </div>
+
+        <div class="carrossel-slide">
+          <img
+            src="imagens/carrossel-pocos-2.jpg"
+            alt="Vista panorâmica de Poços de Caldas e serras ao fundo"
+          />
+          <div class="carrossel-legenda">
+            <h2>Panorâmica da cidade</h2>
+            <p>Mirantes com visão privilegiada para fotos de todo o grupo.</p>
+          </div>
+        </div>
+
+        <div class="carrossel-slide">
+          <img
+            src="imagens/carrossel-pocos-3.jpg"
+            alt="Portal de entrada de Poços de Caldas"
+          />
+          <div class="carrossel-legenda">
+            <h2>Bem-vindo a Poços de Caldas</h2>
+            <p>Portal da cidade – ponto tradicional de chegada das excursões.</p>
+          </div>
+        </div>
+
+        <div class="carrossel-slide">
+          <img
+            src="imagens/carrossel-pocos-4.jpg"
+            alt="Vista panorâmica de Poços de Caldas a partir do Cristo"
+          />
+          <div class="carrossel-legenda">
+            <h2>Cristo e serras da região</h2>
+            <p>Parque do Cristo com visão 360º da cidade e da Serra da Mantiqueira.</p>
+          </div>
+        </div>
+
+        <button class="carrossel-btn prev" aria-label="Foto anterior">
+          &#10094;
+        </button>
+        <button class="carrossel-btn next" aria-label="Próxima foto">
+          &#10095;
+        </button>
+
+        <div class="carrossel-dots">
+          <span class="dot active" data-index="0"></span>
+          <span class="dot" data-index="1"></span>
+          <span class="dot" data-index="2"></span>
+          <span class="dot" data-index="3"></span>
+        </div>
+      </div>
+    </section>
+
+    <main>
+      <!-- SOBRE / APRESENTAÇÃO -->
+      <section id="sobre">
+        <h2 class="titulo-sessao">Excursões, roteiros e city tour em Poços de Caldas</h2>
+        <p class="texto-sessao">
+          A Agência <strong>Paulo Rogério Tur</strong> atua com passeios guiados,
+          roteiros personalizados e excursões em <strong>Poços de Caldas – MG</strong>.
+          Atendimento especial para grupos da melhor idade, igrejas, associações e
+          famílias de todo o Brasil.
+        </p>
+        <p class="texto-sessao">
+          O guia <strong>Paulo Rogério</strong> é credenciado e acompanha o grupo em
+          todos os pontos turísticos, organizando tempos de parada, fotos, alimentação
+          e deslocamento, sempre com segurança e cuidado com cada participante.
+        </p>
+
+        <a
+          class="cta-whats"
+          href="https://wa.me/5535989851441"
+          target="_blank"
+          rel="noopener"
+        >
+          <span>💬</span> Falar com o guia pelo WhatsApp
+        </a>
+      </section>
+
+      <!-- ROTEIROS E PASSEIOS -->
+      <section id="roteiros">
+        <h2 class="titulo-sessao">Roteiros e Passeios</h2>
+        <p class="texto-sessao">
+          Roteiros planejados de acordo com o tempo de permanência do grupo em Poços de
+          Caldas. City tour completo, passeios de um dia e roteiros sob medida.
+        </p>
+
+        <div class="grade-roteiros">
+          <article class="card-roteiro">
+            <h3>City Tour completo</h3>
+            <p>
+              Cristo Redentor, Teleférico, Mirante, Fonte dos Amores, Recanto Japonês,
+              Relógio Floral, praças e principais cartões-postais da cidade.
+            </p>
+          </article>
+
+          <article class="card-roteiro">
+            <h3>Excursão de um dia</h3>
+            <p>
+              Roteiro para grupos que chegam pela manhã e retornam no fim da tarde, com
+              paradas estratégicas para fotos, compras e refeições.
+            </p>
+          </article>
+
+          <article class="card-roteiro">
+            <h3>Grupos da melhor idade</h3>
+            <p>
+              Passeios em ritmo confortável, com pontos de apoio, acessibilidade e
+              acompanhamento próximo durante todo o trajeto.
+            </p>
+          </article>
+
+          <article class="card-roteiro">
+            <h3>Roteiros sob medida</h3>
+            <p>
+              Montagem de roteiro conforme o perfil do grupo, incluindo hospedagem,
+              restaurantes, águas termais, compras e atrações opcionais.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- GALERIA -->
+      <section id="galeria">
+        <h2 class="titulo-sessao">Galeria de Imagens</h2>
+        <p class="texto-sessao">
+          Alguns registros dos pontos turísticos de Poços de Caldas que compõem os
+          roteiros da Agência Paulo Rogério Tur.
+        </p>
+
+        <div class="galeria-grid">
+          <figure class="galeria-item">
+            <img
+              src="imagens/teleferico-pocos-de-caldas.jpg"
+              alt="Estação do teleférico em Poços de Caldas"
+            />
+            <figcaption>Teleférico – cartão-postal com vista para a cidade.</figcaption>
+          </figure>
+
+          <figure class="galeria-item">
+            <img
+              src="imagens/vista-panoramica-pocos-de-caldas.jpg"
+              alt="Vista panorâmica de Poços de Caldas"
+            />
+            <figcaption>Vista aérea a partir dos mirantes da cidade.</figcaption>
+          </figure>
+
+          <figure class="galeria-item">
+            <img
+              src="imagens/cristo-redentor-pocos-de-caldas.jpg"
+              alt="Cristo Redentor em Poços de Caldas"
+            />
+            <figcaption>Cristo Redentor e Parque do Cristo.</figcaption>
+          </figure>
+
+          <figure class="galeria-item">
+            <img
+              src="imagens/recanto-japones-pocos-de-caldas.jpg"
+              alt="Entrada do Recanto Japonês em Poços de Caldas"
+            />
+            <figcaption>Recanto Japonês – natureza e tranquilidade.</figcaption>
+          </figure>
+
+          <figure class="galeria-item">
+            <img
+              src="imagens/fonte-dos-amores-pocos-de-caldas.jpg"
+              alt="Fonte dos Amores em Poços de Caldas"
+            />
+            <figcaption>Fonte dos Amores – cenário romântico para fotos.</figcaption>
+          </figure>
+
+          <figure class="galeria-item">
+            <img
+              src="imagens/guia-com-as-autoridades-da-cidade.jpg"
+              alt="Guia Paulo Rogério com autoridades da cidade em evento de turismo"
+            />
+            <figcaption>Guia Paulo Rogério em eventos oficiais de turismo.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- CLIMA -->
+      <section id="clima">
+        <h2 class="titulo-sessao">Clima em Poços de Caldas – Hoje</h2>
+        <div class="bloco-clima">
+          <div class="temp">--°C</div>
+          <small>Carregando condições do tempo...</small>
+          <p class="texto-sessao">
+            As condições do tempo são importantes para planejar a subida ao Cristo,
+            visitas a mirantes, cascatas e caminhadas. Os roteiros podem ser ajustados
+            conforme o clima do dia.
+          </p>
+          <a
+            href="https://www.climatempo.com.br/previsao-do-tempo/cidade/425/pocos-de-caldas-mg"
+            target="_blank"
+            rel="noopener"
+            >Ver previsão detalhada em Climatempo</a
+          >
+        </div>
+      </section>
+
+      <!-- LOCALIZAÇÃO -->
+      <section id="localizacao">
+        <h2 class="titulo-sessao">Localização e ponto de encontro</h2>
+        <div class="bloco-localizacao">
+          <p class="texto-sessao">
+            Ponto de saída dos passeios na região central de
+            <strong>Poços de Caldas – MG</strong>, com horários combinados conforme o
+            roteiro e a hospedagem do grupo.
+          </p>
+
+          <p class="texto-sessao">
+            Em excursões com ônibus ou vans, o guia combina previamente com o
+            coordenador do grupo o local de chegada, embarque e desembarque.
+          </p>
+
+          <div class="mapa-placeholder">
+            Mapa interativo do ponto de encontro em Poços de Caldas.<br />
+            (Insira aqui o iframe do Google Maps, se desejar.)
+          </div>
+        </div>
+      </section>
+
+      <!-- GUIAS PARCEIROS -->
+      <section id="guias">
+        <h2 class="titulo-sessao">Guias parceiros</h2>
+
+        <div class="grade-guias">
+          <article class="card-guia">
+            <h3>Guia Paulo Rogério – PRM Turismo</h3>
+            <p>
+              Especializado em grupos da melhor idade, igrejas, associações e
+              excursões familiares. Atendimento humanizado, com atenção a cada
+              participante.
+            </p>
+            <p>
+              <strong>WhatsApp:</strong> (35) 9 9885-1441<br />
+              <strong>Telefone fixo:</strong> (35) 3014-0962<br />
+              <strong>Cidade base:</strong> Poços de Caldas – MG
+            </p>
+          </article>
+
+          <article class="card-guia">
+            <h3>Guia Pinho – AFEPESP Santos-SP</h3>
+            <p>
+              Parceria em excursões vindas do litoral paulista, com grupos da AFEPESP
+              Santos-SP e região. Trabalho conjunto em roteiros por Poços de Caldas,
+              Recanto Japonês, cascatas e pontos históricos.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- CONTATOS -->
+      <section id="contatos">
+        <h2 class="titulo-sessao">Contatos e reservas</h2>
+        <div class="bloco-contatos">
+          <p><strong>Guia Paulo Rogério – Agência Paulo Rogério Tur</strong></p>
+          <p><strong>WhatsApp:</strong> (35) 9 9885-1441</p>
+          <p><strong>Telefone fixo:</strong> (35) 3014-0962</p>
+          <p><strong>E-mail:</strong> agenciapaulorogeriotur@gmail.com</p>
+          <p><strong>Cidade:</strong> Poços de Caldas – MG</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        © Agência Paulo Rogério Tur – Poços de Caldas – MG. Todos os direitos
+        reservados.
+      </p>
+      <p>
+        Contato: (35) 9 9885-1441 | Fixo: (35) 3014-0962 |
+        E-mail: agenciapaulorogeriotur@gmail.com
+      </p>
+    </footer>
+
+    <!-- SCRIPT DO CARROSSEL -->
+    <script>
+      (function () {
+        const slides = document.querySelectorAll(".carrossel-slide");
+        const dots = document.querySelectorAll(".carrossel-dots .dot");
+        const prevBtn = document.querySelector(".carrossel-btn.prev");
+        const nextBtn = document.querySelector(".carrossel-btn.next");
+
+        let currentIndex = 0;
+        let intervalId;
+
+        function mostrarSlide(index) {
+          slides.forEach((slide, i) => {
+            slide.classList.toggle("active", i === index);
+          });
+          dots.forEach((dot, i) => {
+            dot.classList.toggle("active", i === index);
+          });
+          currentIndex = index;
+        }
+
+        function proximoSlide() {
+          const novoIndex = (currentIndex + 1) % slides.length;
+          mostrarSlide(novoIndex);
+        }
+
+        function slideAnterior() {
+          const novoIndex = (currentIndex - 1 + slides.length) % slides.length;
+          mostrarSlide(novoIndex);
+        }
+
+        function iniciarAutoPlay() {
+          pararAutoPlay();
+          intervalId = setInterval(proximoSlide, 6000);
+        }
+
+        function pararAutoPlay() {
+          if (intervalId) clearInterval(intervalId);
+        }
+
+        if (prevBtn && nextBtn) {
+          prevBtn.addEventListener("click", () => {
+            slideAnterior();
+            iniciarAutoPlay();
+          });
+
+          nextBtn.addEventListener("click", () => {
+            proximoSlide();
+            iniciarAutoPlay();
+          });
+        }
+
+        dots.forEach((dot) => {
+          dot.addEventListener("click", () => {
+            const index = Number(dot.getAttribute("data-index"));
+            mostrarSlide(index);
+            iniciarAutoPlay();
+          });
         });
-        dots.forEach((dot, i) => {
-          dot.classList.toggle("active", i === index);
-        });
-        currentIndex = index;
-      }
 
-      function proximoSlide() {
-        const novoIndex = (currentIndex + 1) % slides.length;
-        mostrarSlide(novoIndex);
-      }
-
-      function slideAnterior() {
-        const novoIndex =
-          (currentIndex - 1 + slides.length) % slides.length;
-        mostrarSlide(novoIndex);
-      }
-
-      function iniciarAutoPlay() {
-        pararAutoPlay();
-        intervalId = setInterval(proximoSlide, 6000);
-      }
-
-      function pararAutoPlay() {
-        if (intervalId) clearInterval(intervalId);
-      }
-
-      if (prevBtn && nextBtn) {
-        prevBtn.addEventListener("click", () => {
-          slideAnterior();
-          iniciarAutoPlay();
-        });
-
-        nextBtn.addEventListener("click", () => {
-          proximoSlide();
-          iniciarAutoPlay();
-        });
-      }
-
-      dots.forEach((dot) => {
-        dot.addEventListener("click", () => {
-          const index = Number(dot.getAttribute("data-index"));
-          mostrarSlide(index);
-          iniciarAutoPlay();
-        });
-      });
-
-      mostrarSlide(currentIndex);
-      iniciarAutoPlay();
-    })();
-  </script>
-</body>
+        mostrarSlide(currentIndex);
+        iniciarAutoPlay();
+      })();
+    </script>
+  </body>
 </html>
