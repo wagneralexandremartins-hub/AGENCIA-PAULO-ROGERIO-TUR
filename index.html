@@ -419,6 +419,61 @@
         margin: 2px 0;
       }
 
+      /* BANNER DE COOKIES – TILÁPIA */
+
+      .cookie-banner {
+        position: fixed;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 600px;
+        width: calc(100% - 20px);
+        background: #004b8d;
+        color: #fff;
+        padding: 10px 14px;
+        border-radius: 999px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.8rem;
+        z-index: 200;
+        flex-wrap: wrap;
+      }
+
+      .cookie-banner span strong {
+        font-weight: 700;
+      }
+
+      .cookie-banner button {
+        margin-left: auto;
+        background: #ffcc33;
+        color: #004b8d;
+        border: none;
+        border-radius: 999px;
+        padding: 6px 12px;
+        font-weight: 600;
+        font-size: 0.8rem;
+        cursor: pointer;
+        white-space: nowrap;
+      }
+
+      .cookie-banner button:hover {
+        filter: brightness(1.05);
+      }
+
+      @media (max-width: 480px) {
+        .cookie-banner {
+          border-radius: 12px;
+        }
+
+        .cookie-banner button {
+          width: 100%;
+          text-align: center;
+          margin-left: 0;
+        }
+      }
+
       /* RESPONSIVO */
 
       @media (min-width: 768px) {
@@ -838,6 +893,39 @@
 
         mostrarSlide(currentIndex);
         iniciarAutoPlay();
+      })();
+    </script>
+
+    <!-- SCRIPT DO BANNER DE COOKIES (TILÁPIA) -->
+    <div class="cookie-banner" id="cookieBanner" aria-label="Aviso de cookies">
+      <span>🐟</span>
+      <span>
+        <strong>Política de Cookies</strong> – Usamos cookies para melhorar a navegação
+        e estatísticas de acesso. Ao continuar, você concorda com nossa política.
+      </span>
+      <button type="button" id="btnAceitarCookies">Aceitar</button>
+    </div>
+
+    <script>
+      (function () {
+        const banner = document.getElementById("cookieBanner");
+        const botao = document.getElementById("btnAceitarCookies");
+        const CHAVE = "prmCookiesAceitos";
+
+        if (!banner || !botao) return;
+
+        function esconderBanner() {
+          banner.style.display = "none";
+        }
+
+        if (localStorage.getItem(CHAVE) === "sim") {
+          esconderBanner();
+        }
+
+        botao.addEventListener("click", function () {
+          localStorage.setItem(CHAVE, "sim");
+          esconderBanner();
+        });
       })();
     </script>
   </body>
