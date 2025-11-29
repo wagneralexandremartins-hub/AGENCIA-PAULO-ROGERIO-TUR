@@ -498,7 +498,7 @@
         }
       }
 
-      /* RESPONSIVO */
+      /* RESPONSIVO DESKTOP */
 
       @media (min-width: 768px) {
         .carrossel-slide {
@@ -526,13 +526,43 @@
         }
       }
 
+      /* RESPONSIVO MOBILE – ENXUGAR TOPO NO CELULAR */
+
       @media (max-width: 640px) {
         .topo-conteudo {
-          flex-wrap: wrap;
+          padding: 8px 10px;
+          gap: 8px;
+        }
+
+        .logo-sigla {
+          width: 32px;
+          height: 32px;
+          font-size: 0.9rem;
+        }
+
+        .logo-info h1 {
+          font-size: 0.9rem;
+        }
+
+        .logo-info p {
+          display: none; /* esconde a frase para ganhar altura */
         }
 
         nav.menu {
+          font-size: 0.75rem;
+          gap: 6px;
           justify-content: flex-start;
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
+        }
+
+        nav.menu a {
+          padding: 4px 8px;
+        }
+
+        .btn-whats-topo {
+          font-size: 0.75rem;
+          padding: 4px 8px;
         }
       }
     </style>
@@ -964,7 +994,7 @@
           .then((data) => {
             if (data && data.current && typeof data.current.temperature_2m === "number") {
               const temp = data.current.temperature_2m.toFixed(0);
-              tempEl.textContent = temp + "°C";
+              tempEl.textContent = temp + '°C';
               statusEl.textContent = "Temperatura atual em Poços de Caldas.";
             } else {
               statusEl.textContent =
