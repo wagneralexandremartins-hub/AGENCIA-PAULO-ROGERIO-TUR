@@ -182,6 +182,16 @@ body {
   object-fit: cover;
 }
 
+/* ===== VÍDEO NO PADRÃO DOS CARDS ===== */
+.prt-card-video {
+  width: 100%;
+  height: 180px;         /* mesma altura das imagens */
+  object-fit: cover;     /* mantém proporção */
+  display: block;
+  background: #000;       /* fundo preto */
+  border: none;
+}
+
 .prt-card-body {
   padding: 16px;
 }
@@ -269,6 +279,7 @@ body {
   border-radius: 6px;
   cursor: pointer;
 }
+
 /* ===== OUTDOOR NATAL DE LUZ ===== */
 .prt-outdoor {
   background: linear-gradient(90deg, #3f51b5, #9c27b0);
