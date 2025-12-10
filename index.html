@@ -333,6 +333,15 @@
         display: block;
       }
 
+      /* VÍDEO DENTRO DA GALERIA */
+      .galeria-video video {
+        width: 100%;
+        height: 260px;
+        display: block;
+        object-fit: cover;
+        background: #000;
+      }
+
       .galeria-item figcaption {
         padding: 8px 10px;
         font-size: 0.85rem;
@@ -770,14 +779,16 @@
             </figcaption>
           </figure>
 
-          <div class="card video-card">
-      <div class="video-container">
-     <video autoplay muted loop playsinline>
-      <source src="videos/por-do-sol.mp4" type="video/mp4">
-         </video>
-          </div>
-           <p>Pôr do Sol – Especial de Natal em Poços de Caldas.</p>
-          </div>
+          <!-- VÍDEO – PÔR DO SOL -->
+          <figure class="galeria-item galeria-video">
+            <video autoplay muted loop playsinline>
+              <source src="videos/por-do-sol.mp4" type="video/mp4" />
+              Seu navegador não suporta vídeo em HTML5.
+            </video>
+            <figcaption>
+              Pôr do Sol – Especial de Natal em Poços de Caldas.
+            </figcaption>
+          </figure>
 
           <!-- Recanto Japonês -->
           <figure class="galeria-item">
