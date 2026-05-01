@@ -304,8 +304,154 @@ footer {
 @media (max-width: 640px) {
   nav.menu { font-size: 0.75rem; overflow-x: auto; }
   .carrossel-slide { height: 280px; }
+} 
+
+/* ===== Vídeos e Galeria de Fotos ===== */
+
+.videos-galeria-section {
+  padding: 70px 20px;
+  background: linear-gradient(180deg, #f7faf6 0%, #ffffff 100%);
 }
 
+.videos-galeria-section .container {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.videos-galeria-section .section-header {
+  text-align: center;
+  max-width: 850px;
+  margin: 0 auto 40px auto;
+}
+
+.videos-galeria-section .section-tag {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 7px 16px;
+  border-radius: 999px;
+  background: #e7f1e8;
+  color: #1f5c38;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.videos-galeria-section .section-header h2 {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  color: #173b25;
+  margin-bottom: 14px;
+}
+
+.videos-galeria-section .section-header p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #4a4a4a;
+}
+
+.videos-galeria-section .videos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  margin-bottom: 45px;
+}
+
+.videos-galeria-section .video-card {
+  background: #ffffff;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.10);
+}
+
+.videos-galeria-section .video-card video {
+  width: 100%;
+  height: 360px;
+  display: block;
+  object-fit: cover;
+  background: #000000;
+}
+
+.videos-galeria-section .video-info {
+  padding: 20px;
+}
+
+.videos-galeria-section .video-info h3 {
+  color: #173b25;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.videos-galeria-section .video-info p {
+  color: #555555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.videos-galeria-section .galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.videos-galeria-section .galeria-card {
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 0;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.09);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.videos-galeria-section .galeria-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.13);
+}
+
+.videos-galeria-section .galeria-card img {
+  width: 100%;
+  height: 260px;
+  display: block;
+  object-fit: cover;
+}
+
+.videos-galeria-section .galeria-card figcaption {
+  padding: 16px;
+  text-align: center;
+  font-weight: 700;
+  color: #173b25;
+  font-size: 0.98rem;
+}
+
+/* Responsivo - Vídeos e Galeria */
+@media (max-width: 900px) {
+  .videos-galeria-section .videos-grid,
+  .videos-galeria-section .galeria-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .videos-galeria-section .video-card video {
+    height: 280px;
+  }
+}
+
+@media (max-width: 620px) {
+  .videos-galeria-section {
+    padding: 50px 15px;
+  }
+
+  .videos-galeria-section .videos-grid,
+  .videos-galeria-section .galeria-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .videos-galeria-section .video-card video {
+    height: 240px;
+  }
+
+  .videos-galeria-section .galeria-card img {
+    height: 250px;
+  }
+}
+
+/* ===== /Vídeos e Galeria de Fotos ===== */
 /* ===== Depoimentos (Prova Social) ===== */
 .testimonials {
   padding: 64px 16px;
